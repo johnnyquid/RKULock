@@ -1,0 +1,402 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D1AE825A15A4E46000DE7655 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AE825915A4E46000DE7655 /* Foundation.framework */; };
+		D1AE826015A4E46000DE7655 /* RKULock.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE825F15A4E46000DE7655 /* RKULock.m */; };
+		D1AE826815A4E46000DE7655 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AE826715A4E46000DE7655 /* SenTestingKit.framework */; };
+		D1AE826A15A4E46000DE7655 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AE826915A4E46000DE7655 /* UIKit.framework */; };
+		D1AE826B15A4E46000DE7655 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AE825915A4E46000DE7655 /* Foundation.framework */; };
+		D1AE826E15A4E46000DE7655 /* libRKULock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AE825615A4E46000DE7655 /* libRKULock.a */; };
+		D1AE827415A4E46000DE7655 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D1AE827215A4E46000DE7655 /* InfoPlist.strings */; };
+		D1AE827715A4E46000DE7655 /* RKULockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE827615A4E46000DE7655 /* RKULockTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D1AE826C15A4E46000DE7655 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1AE824D15A4E46000DE7655 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1AE825515A4E46000DE7655;
+			remoteInfo = RKULock;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D1AE825615A4E46000DE7655 /* libRKULock.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRKULock.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1AE825915A4E46000DE7655 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D1AE825D15A4E46000DE7655 /* RKULock-Prefix.pch */ = {isa = PBXFileReference; path = "RKULock-Prefix.pch"; sourceTree = "<group>"; };
+		D1AE825E15A4E46000DE7655 /* RKULock.h */ = {isa = PBXFileReference; path = RKULock.h; sourceTree = "<group>"; };
+		D1AE825F15A4E46000DE7655 /* RKULock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RKULock.m; sourceTree = "<group>"; };
+		D1AE826615A4E46000DE7655 /* RKULockTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RKULockTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1AE826715A4E46000DE7655 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		D1AE826915A4E46000DE7655 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		D1AE827115A4E46000DE7655 /* RKULockTests-Info.plist */ = {isa = PBXFileReference; path = "RKULockTests-Info.plist"; sourceTree = "<group>"; };
+		D1AE827315A4E46000DE7655 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D1AE827515A4E46000DE7655 /* RKULockTests.h */ = {isa = PBXFileReference; path = RKULockTests.h; sourceTree = "<group>"; };
+		D1AE827615A4E46000DE7655 /* RKULockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RKULockTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D1AE825315A4E46000DE7655 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1AE825A15A4E46000DE7655 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1AE826215A4E46000DE7655 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1AE826815A4E46000DE7655 /* SenTestingKit.framework in Frameworks */,
+				D1AE826A15A4E46000DE7655 /* UIKit.framework in Frameworks */,
+				D1AE826B15A4E46000DE7655 /* Foundation.framework in Frameworks */,
+				D1AE826E15A4E46000DE7655 /* libRKULock.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D1AE824B15A4E46000DE7655 = {
+			isa = PBXGroup;
+			children = (
+				D1AE825B15A4E46000DE7655 /* RKULock */,
+				D1AE826F15A4E46000DE7655 /* RKULockTests */,
+				D1AE825815A4E46000DE7655 /* Frameworks */,
+				D1AE825715A4E46000DE7655 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D1AE825715A4E46000DE7655 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1AE825615A4E46000DE7655 /* libRKULock.a */,
+				D1AE826615A4E46000DE7655 /* RKULockTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D1AE825815A4E46000DE7655 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1AE825915A4E46000DE7655 /* Foundation.framework */,
+				D1AE826715A4E46000DE7655 /* SenTestingKit.framework */,
+				D1AE826915A4E46000DE7655 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D1AE825B15A4E46000DE7655 /* RKULock */ = {
+			isa = PBXGroup;
+			children = (
+				D1AE825E15A4E46000DE7655 /* RKULock.h */,
+				D1AE825F15A4E46000DE7655 /* RKULock.m */,
+				D1AE825C15A4E46000DE7655 /* Supporting Files */,
+			);
+			path = RKULock;
+			sourceTree = "<group>";
+		};
+		D1AE825C15A4E46000DE7655 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D1AE825D15A4E46000DE7655 /* RKULock-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D1AE826F15A4E46000DE7655 /* RKULockTests */ = {
+			isa = PBXGroup;
+			children = (
+				D1AE827515A4E46000DE7655 /* RKULockTests.h */,
+				D1AE827615A4E46000DE7655 /* RKULockTests.m */,
+				D1AE827015A4E46000DE7655 /* Supporting Files */,
+			);
+			path = RKULockTests;
+			sourceTree = "<group>";
+		};
+		D1AE827015A4E46000DE7655 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D1AE827115A4E46000DE7655 /* RKULockTests-Info.plist */,
+				D1AE827215A4E46000DE7655 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D1AE825415A4E46000DE7655 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D1AE825515A4E46000DE7655 /* RKULock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1AE827A15A4E46000DE7655 /* Build configuration list for PBXNativeTarget "RKULock" */;
+			buildPhases = (
+				D1AE825215A4E46000DE7655 /* Sources */,
+				D1AE825315A4E46000DE7655 /* Frameworks */,
+				D1AE825415A4E46000DE7655 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RKULock;
+			productName = RKULock;
+			productReference = D1AE825615A4E46000DE7655 /* libRKULock.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D1AE826515A4E46000DE7655 /* RKULockTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1AE827D15A4E46000DE7655 /* Build configuration list for PBXNativeTarget "RKULockTests" */;
+			buildPhases = (
+				D1AE826115A4E46000DE7655 /* Sources */,
+				D1AE826215A4E46000DE7655 /* Frameworks */,
+				D1AE826315A4E46000DE7655 /* Resources */,
+				D1AE826415A4E46000DE7655 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1AE826D15A4E46000DE7655 /* PBXTargetDependency */,
+			);
+			name = RKULockTests;
+			productName = RKULockTests;
+			productReference = D1AE826615A4E46000DE7655 /* RKULockTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D1AE824D15A4E46000DE7655 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = D1AE825015A4E46000DE7655 /* Build configuration list for PBXProject "RKULock" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D1AE824B15A4E46000DE7655;
+			productRefGroup = D1AE825715A4E46000DE7655 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D1AE825515A4E46000DE7655 /* RKULock */,
+				D1AE826515A4E46000DE7655 /* RKULockTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D1AE826315A4E46000DE7655 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1AE827415A4E46000DE7655 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D1AE826415A4E46000DE7655 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D1AE825215A4E46000DE7655 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1AE826015A4E46000DE7655 /* RKULock.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1AE826115A4E46000DE7655 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1AE827715A4E46000DE7655 /* RKULockTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D1AE826D15A4E46000DE7655 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1AE825515A4E46000DE7655 /* RKULock */;
+			targetProxy = D1AE826C15A4E46000DE7655 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D1AE827215A4E46000DE7655 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1AE827315A4E46000DE7655 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D1AE827815A4E46000DE7655 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D1AE827915A4E46000DE7655 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D1AE827B15A4E46000DE7655 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/RKULock.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RKULock/RKULock-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D1AE827C15A4E46000DE7655 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/RKULock.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RKULock/RKULock-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D1AE827E15A4E46000DE7655 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RKULock/RKULock-Prefix.pch";
+				INFOPLIST_FILE = "RKULockTests/RKULockTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		D1AE827F15A4E46000DE7655 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RKULock/RKULock-Prefix.pch";
+				INFOPLIST_FILE = "RKULockTests/RKULockTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D1AE825015A4E46000DE7655 /* Build configuration list for PBXProject "RKULock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1AE827815A4E46000DE7655 /* Debug */,
+				D1AE827915A4E46000DE7655 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1AE827A15A4E46000DE7655 /* Build configuration list for PBXNativeTarget "RKULock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1AE827B15A4E46000DE7655 /* Debug */,
+				D1AE827C15A4E46000DE7655 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D1AE827D15A4E46000DE7655 /* Build configuration list for PBXNativeTarget "RKULockTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1AE827E15A4E46000DE7655 /* Debug */,
+				D1AE827F15A4E46000DE7655 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D1AE824D15A4E46000DE7655 /* Project object */;
+}
