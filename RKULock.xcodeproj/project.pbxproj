@@ -14,7 +14,35 @@
 		D1AE826B15A4E46000DE7655 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AE825915A4E46000DE7655 /* Foundation.framework */; };
 		D1AE826E15A4E46000DE7655 /* libRKULock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AE825615A4E46000DE7655 /* libRKULock.a */; };
 		D1AE827415A4E46000DE7655 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D1AE827215A4E46000DE7655 /* InfoPlist.strings */; };
-		D1AE827715A4E46000DE7655 /* RKULockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE827615A4E46000DE7655 /* RKULockTests.m */; };
+		D1AE828315A4E52400DE7655 /* RKUSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D1AE828115A4E52400DE7655 /* RKUSessionManager.h */; };
+		D1AE828415A4E52400DE7655 /* RKUSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE828215A4E52400DE7655 /* RKUSessionManager.m */; };
+		D1AE828515A4E52400DE7655 /* RKUSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE828215A4E52400DE7655 /* RKUSessionManager.m */; };
+		D1AE829715A4E6F700DE7655 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = D1AE828815A4E6F700DE7655 /* LICENSE */; };
+		D1AE829815A4E6F700DE7655 /* MARTNSObject.h in Headers */ = {isa = PBXBuildFile; fileRef = D1AE828915A4E6F700DE7655 /* MARTNSObject.h */; };
+		D1AE829915A4E6F700DE7655 /* MARTNSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE828A15A4E6F700DE7655 /* MARTNSObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D1AE829A15A4E6F700DE7655 /* MARTNSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE828A15A4E6F700DE7655 /* MARTNSObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D1AE829B15A4E6F700DE7655 /* RTIvar.h in Headers */ = {isa = PBXBuildFile; fileRef = D1AE828B15A4E6F700DE7655 /* RTIvar.h */; };
+		D1AE829C15A4E6F700DE7655 /* RTIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE828C15A4E6F700DE7655 /* RTIvar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D1AE829D15A4E6F700DE7655 /* RTIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE828C15A4E6F700DE7655 /* RTIvar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D1AE829E15A4E6F700DE7655 /* RTMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = D1AE828D15A4E6F700DE7655 /* RTMethod.h */; };
+		D1AE829F15A4E6F700DE7655 /* RTMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE828E15A4E6F700DE7655 /* RTMethod.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D1AE82A015A4E6F700DE7655 /* RTMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE828E15A4E6F700DE7655 /* RTMethod.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D1AE82A115A4E6F700DE7655 /* RTProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = D1AE828F15A4E6F700DE7655 /* RTProperty.h */; };
+		D1AE82A215A4E6F700DE7655 /* RTProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE829015A4E6F700DE7655 /* RTProperty.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D1AE82A315A4E6F700DE7655 /* RTProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE829015A4E6F700DE7655 /* RTProperty.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D1AE82A415A4E6F700DE7655 /* RTProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = D1AE829115A4E6F700DE7655 /* RTProtocol.h */; };
+		D1AE82A515A4E6F700DE7655 /* RTProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE829215A4E6F700DE7655 /* RTProtocol.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D1AE82A615A4E6F700DE7655 /* RTProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE829215A4E6F700DE7655 /* RTProtocol.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D1AE82A715A4E6F700DE7655 /* RTUnregisteredClass.h in Headers */ = {isa = PBXBuildFile; fileRef = D1AE829315A4E6F700DE7655 /* RTUnregisteredClass.h */; };
+		D1AE82A815A4E6F700DE7655 /* RTUnregisteredClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE829415A4E6F700DE7655 /* RTUnregisteredClass.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D1AE82A915A4E6F700DE7655 /* RTUnregisteredClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE829415A4E6F700DE7655 /* RTUnregisteredClass.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D1AE82AF15A4E79C00DE7655 /* RKUAuthPlugIn.h in Headers */ = {isa = PBXBuildFile; fileRef = D1AE82AE15A4E79C00DE7655 /* RKUAuthPlugIn.h */; };
+		D1AE82B315A4E7D800DE7655 /* RKUTestAuthPlugIn.h in Headers */ = {isa = PBXBuildFile; fileRef = D1AE82B115A4E7D800DE7655 /* RKUTestAuthPlugIn.h */; };
+		D1AE82B415A4E7D800DE7655 /* RKUTestAuthPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE82B215A4E7D800DE7655 /* RKUTestAuthPlugIn.m */; };
+		D1AE82B515A4E7D800DE7655 /* RKUTestAuthPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE82B215A4E7D800DE7655 /* RKUTestAuthPlugIn.m */; };
+		D1AE82B915A4E84100DE7655 /* RKUSessionManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE82B815A4E84100DE7655 /* RKUSessionManagerTest.m */; };
+		D1AE82BF15A4F88C00DE7655 /* RKUAuthPlugInFail.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE82BE15A4F88C00DE7655 /* RKUAuthPlugInFail.m */; };
+		D1AE82C215A4F8A900DE7655 /* RKUFailTestAuthPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE82C115A4F8A900DE7655 /* RKUFailTestAuthPlugIn.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,16 +58,38 @@
 /* Begin PBXFileReference section */
 		D1AE825615A4E46000DE7655 /* libRKULock.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRKULock.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1AE825915A4E46000DE7655 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D1AE825D15A4E46000DE7655 /* RKULock-Prefix.pch */ = {isa = PBXFileReference; path = "RKULock-Prefix.pch"; sourceTree = "<group>"; };
-		D1AE825E15A4E46000DE7655 /* RKULock.h */ = {isa = PBXFileReference; path = RKULock.h; sourceTree = "<group>"; };
+		D1AE825D15A4E46000DE7655 /* RKULock-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RKULock-Prefix.pch"; sourceTree = "<group>"; };
+		D1AE825E15A4E46000DE7655 /* RKULock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RKULock.h; sourceTree = "<group>"; };
 		D1AE825F15A4E46000DE7655 /* RKULock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RKULock.m; sourceTree = "<group>"; };
 		D1AE826615A4E46000DE7655 /* RKULockTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RKULockTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1AE826715A4E46000DE7655 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		D1AE826915A4E46000DE7655 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		D1AE827115A4E46000DE7655 /* RKULockTests-Info.plist */ = {isa = PBXFileReference; path = "RKULockTests-Info.plist"; sourceTree = "<group>"; };
+		D1AE827115A4E46000DE7655 /* RKULockTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RKULockTests-Info.plist"; sourceTree = "<group>"; };
 		D1AE827315A4E46000DE7655 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D1AE827515A4E46000DE7655 /* RKULockTests.h */ = {isa = PBXFileReference; path = RKULockTests.h; sourceTree = "<group>"; };
-		D1AE827615A4E46000DE7655 /* RKULockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RKULockTests.m; sourceTree = "<group>"; };
+		D1AE828115A4E52400DE7655 /* RKUSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RKUSessionManager.h; path = Manager/RKUSessionManager.h; sourceTree = "<group>"; };
+		D1AE828215A4E52400DE7655 /* RKUSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RKUSessionManager.m; path = Manager/RKUSessionManager.m; sourceTree = "<group>"; };
+		D1AE828815A4E6F700DE7655 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = Libraries/MAObjRuntime/LICENSE; sourceTree = "<group>"; };
+		D1AE828915A4E6F700DE7655 /* MARTNSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MARTNSObject.h; path = Libraries/MAObjRuntime/MARTNSObject.h; sourceTree = "<group>"; };
+		D1AE828A15A4E6F700DE7655 /* MARTNSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MARTNSObject.m; path = Libraries/MAObjRuntime/MARTNSObject.m; sourceTree = "<group>"; };
+		D1AE828B15A4E6F700DE7655 /* RTIvar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTIvar.h; path = Libraries/MAObjRuntime/RTIvar.h; sourceTree = "<group>"; };
+		D1AE828C15A4E6F700DE7655 /* RTIvar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTIvar.m; path = Libraries/MAObjRuntime/RTIvar.m; sourceTree = "<group>"; };
+		D1AE828D15A4E6F700DE7655 /* RTMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTMethod.h; path = Libraries/MAObjRuntime/RTMethod.h; sourceTree = "<group>"; };
+		D1AE828E15A4E6F700DE7655 /* RTMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTMethod.m; path = Libraries/MAObjRuntime/RTMethod.m; sourceTree = "<group>"; };
+		D1AE828F15A4E6F700DE7655 /* RTProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTProperty.h; path = Libraries/MAObjRuntime/RTProperty.h; sourceTree = "<group>"; };
+		D1AE829015A4E6F700DE7655 /* RTProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTProperty.m; path = Libraries/MAObjRuntime/RTProperty.m; sourceTree = "<group>"; };
+		D1AE829115A4E6F700DE7655 /* RTProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTProtocol.h; path = Libraries/MAObjRuntime/RTProtocol.h; sourceTree = "<group>"; };
+		D1AE829215A4E6F700DE7655 /* RTProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTProtocol.m; path = Libraries/MAObjRuntime/RTProtocol.m; sourceTree = "<group>"; };
+		D1AE829315A4E6F700DE7655 /* RTUnregisteredClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTUnregisteredClass.h; path = Libraries/MAObjRuntime/RTUnregisteredClass.h; sourceTree = "<group>"; };
+		D1AE829415A4E6F700DE7655 /* RTUnregisteredClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTUnregisteredClass.m; path = Libraries/MAObjRuntime/RTUnregisteredClass.m; sourceTree = "<group>"; };
+		D1AE82AE15A4E79C00DE7655 /* RKUAuthPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RKUAuthPlugIn.h; path = Protocols/RKUAuthPlugIn.h; sourceTree = "<group>"; };
+		D1AE82B115A4E7D800DE7655 /* RKUTestAuthPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RKUTestAuthPlugIn.h; path = PlugIns/RKUTestAuthPlugIn.h; sourceTree = "<group>"; };
+		D1AE82B215A4E7D800DE7655 /* RKUTestAuthPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RKUTestAuthPlugIn.m; path = PlugIns/RKUTestAuthPlugIn.m; sourceTree = "<group>"; };
+		D1AE82B715A4E84100DE7655 /* RKUSessionManagerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RKUSessionManagerTest.h; path = Manager/RKUSessionManagerTest.h; sourceTree = "<group>"; };
+		D1AE82B815A4E84100DE7655 /* RKUSessionManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RKUSessionManagerTest.m; path = Manager/RKUSessionManagerTest.m; sourceTree = "<group>"; };
+		D1AE82BD15A4F88C00DE7655 /* RKUAuthPlugInFail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RKUAuthPlugInFail.h; path = PlugIns/RKUAuthPlugInFail.h; sourceTree = "<group>"; };
+		D1AE82BE15A4F88C00DE7655 /* RKUAuthPlugInFail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RKUAuthPlugInFail.m; path = PlugIns/RKUAuthPlugInFail.m; sourceTree = "<group>"; };
+		D1AE82C015A4F8A900DE7655 /* RKUFailTestAuthPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RKUFailTestAuthPlugIn.h; path = PlugIns/RKUFailTestAuthPlugIn.h; sourceTree = "<group>"; };
+		D1AE82C115A4F8A900DE7655 /* RKUFailTestAuthPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RKUFailTestAuthPlugIn.m; path = PlugIns/RKUFailTestAuthPlugIn.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +118,7 @@
 		D1AE824B15A4E46000DE7655 = {
 			isa = PBXGroup;
 			children = (
+				D1AE828715A4E6E900DE7655 /* Libraries */,
 				D1AE825B15A4E46000DE7655 /* RKULock */,
 				D1AE826F15A4E46000DE7655 /* RKULockTests */,
 				D1AE825815A4E46000DE7655 /* Frameworks */,
@@ -97,6 +148,8 @@
 		D1AE825B15A4E46000DE7655 /* RKULock */ = {
 			isa = PBXGroup;
 			children = (
+				D1AE82AD15A4E76E00DE7655 /* Protocols */,
+				D1AE828015A4E4DA00DE7655 /* Manager */,
 				D1AE825E15A4E46000DE7655 /* RKULock.h */,
 				D1AE825F15A4E46000DE7655 /* RKULock.m */,
 				D1AE825C15A4E46000DE7655 /* Supporting Files */,
@@ -115,8 +168,8 @@
 		D1AE826F15A4E46000DE7655 /* RKULockTests */ = {
 			isa = PBXGroup;
 			children = (
-				D1AE827515A4E46000DE7655 /* RKULockTests.h */,
-				D1AE827615A4E46000DE7655 /* RKULockTests.m */,
+				D1AE82B615A4E80500DE7655 /* Manager */,
+				D1AE82B015A4E7B400DE7655 /* PlugIns */,
 				D1AE827015A4E46000DE7655 /* Supporting Files */,
 			);
 			path = RKULockTests;
@@ -131,6 +184,65 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D1AE828015A4E4DA00DE7655 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				D1AE828115A4E52400DE7655 /* RKUSessionManager.h */,
+				D1AE828215A4E52400DE7655 /* RKUSessionManager.m */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		D1AE828715A4E6E900DE7655 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				D1AE828815A4E6F700DE7655 /* LICENSE */,
+				D1AE828915A4E6F700DE7655 /* MARTNSObject.h */,
+				D1AE828A15A4E6F700DE7655 /* MARTNSObject.m */,
+				D1AE828B15A4E6F700DE7655 /* RTIvar.h */,
+				D1AE828C15A4E6F700DE7655 /* RTIvar.m */,
+				D1AE828D15A4E6F700DE7655 /* RTMethod.h */,
+				D1AE828E15A4E6F700DE7655 /* RTMethod.m */,
+				D1AE828F15A4E6F700DE7655 /* RTProperty.h */,
+				D1AE829015A4E6F700DE7655 /* RTProperty.m */,
+				D1AE829115A4E6F700DE7655 /* RTProtocol.h */,
+				D1AE829215A4E6F700DE7655 /* RTProtocol.m */,
+				D1AE829315A4E6F700DE7655 /* RTUnregisteredClass.h */,
+				D1AE829415A4E6F700DE7655 /* RTUnregisteredClass.m */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		D1AE82AD15A4E76E00DE7655 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D1AE82AE15A4E79C00DE7655 /* RKUAuthPlugIn.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		D1AE82B015A4E7B400DE7655 /* PlugIns */ = {
+			isa = PBXGroup;
+			children = (
+				D1AE82B115A4E7D800DE7655 /* RKUTestAuthPlugIn.h */,
+				D1AE82B215A4E7D800DE7655 /* RKUTestAuthPlugIn.m */,
+				D1AE82BD15A4F88C00DE7655 /* RKUAuthPlugInFail.h */,
+				D1AE82BE15A4F88C00DE7655 /* RKUAuthPlugInFail.m */,
+				D1AE82C015A4F8A900DE7655 /* RKUFailTestAuthPlugIn.h */,
+				D1AE82C115A4F8A900DE7655 /* RKUFailTestAuthPlugIn.m */,
+			);
+			name = PlugIns;
+			sourceTree = "<group>";
+		};
+		D1AE82B615A4E80500DE7655 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				D1AE82B715A4E84100DE7655 /* RKUSessionManagerTest.h */,
+				D1AE82B815A4E84100DE7655 /* RKUSessionManagerTest.m */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -138,6 +250,15 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1AE828315A4E52400DE7655 /* RKUSessionManager.h in Headers */,
+				D1AE829815A4E6F700DE7655 /* MARTNSObject.h in Headers */,
+				D1AE829B15A4E6F700DE7655 /* RTIvar.h in Headers */,
+				D1AE829E15A4E6F700DE7655 /* RTMethod.h in Headers */,
+				D1AE82A115A4E6F700DE7655 /* RTProperty.h in Headers */,
+				D1AE82A415A4E6F700DE7655 /* RTProtocol.h in Headers */,
+				D1AE82A715A4E6F700DE7655 /* RTUnregisteredClass.h in Headers */,
+				D1AE82AF15A4E79C00DE7655 /* RKUAuthPlugIn.h in Headers */,
+				D1AE82B315A4E7D800DE7655 /* RKUTestAuthPlugIn.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1AE827415A4E46000DE7655 /* InfoPlist.strings in Resources */,
+				D1AE829715A4E6F700DE7655 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +361,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1AE826015A4E46000DE7655 /* RKULock.m in Sources */,
+				D1AE828415A4E52400DE7655 /* RKUSessionManager.m in Sources */,
+				D1AE829915A4E6F700DE7655 /* MARTNSObject.m in Sources */,
+				D1AE829C15A4E6F700DE7655 /* RTIvar.m in Sources */,
+				D1AE829F15A4E6F700DE7655 /* RTMethod.m in Sources */,
+				D1AE82A215A4E6F700DE7655 /* RTProperty.m in Sources */,
+				D1AE82A515A4E6F700DE7655 /* RTProtocol.m in Sources */,
+				D1AE82A815A4E6F700DE7655 /* RTUnregisteredClass.m in Sources */,
+				D1AE82B415A4E7D800DE7655 /* RKUTestAuthPlugIn.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,7 +376,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1AE827715A4E46000DE7655 /* RKULockTests.m in Sources */,
+				D1AE828515A4E52400DE7655 /* RKUSessionManager.m in Sources */,
+				D1AE829A15A4E6F700DE7655 /* MARTNSObject.m in Sources */,
+				D1AE829D15A4E6F700DE7655 /* RTIvar.m in Sources */,
+				D1AE82A015A4E6F700DE7655 /* RTMethod.m in Sources */,
+				D1AE82A315A4E6F700DE7655 /* RTProperty.m in Sources */,
+				D1AE82A615A4E6F700DE7655 /* RTProtocol.m in Sources */,
+				D1AE82A915A4E6F700DE7655 /* RTUnregisteredClass.m in Sources */,
+				D1AE82B515A4E7D800DE7655 /* RKUTestAuthPlugIn.m in Sources */,
+				D1AE82B915A4E84100DE7655 /* RKUSessionManagerTest.m in Sources */,
+				D1AE82BF15A4F88C00DE7655 /* RKUAuthPlugInFail.m in Sources */,
+				D1AE82C215A4F8A900DE7655 /* RKUFailTestAuthPlugIn.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

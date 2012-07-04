@@ -1,0 +1,39 @@
+//
+//  RKUSessionManagerTest.m
+//  RKULock
+//
+//  Created by Luis Alberto Hernández Guzmán on 7/4/12.
+//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//
+
+#import "RKUSessionManagerTest.h"
+#import "RKUSessionManager.h"
+#import "RKUTestAuthPlugIn.h"
+
+@implementation RKUSessionManagerTest
+
+@synthesize sessionManager;
+
+- (void)setUp
+{
+	self.sessionManager = [RKUSessionManager sharedInstance];
+}
+
+
+- (void)testFindAuthPluginClassesByConventionAndProtocol
+{
+	NSArray *array = [self.sessionManager findAuthPluginClassesByConventionAndProtocol];
+	STAssertNotNil(array, @"Finding Plugin classes by Convention returns a valid array");
+
+	NSUInteger expectedArrayCount = 1;
+	STAssertEquals([array count], expectedArrayCount, @"Checking array is not empty");
+}
+
+- (void)testAuthenticatesWithCorrectService
+{
+	NSString *testServiceName = @"testService";
+	[self.sessionManager authenticateWithServiceName:testServiceName];
+	STAssertEqualObjects(self.sessionManager.currentAuthPluginClass, [RKUTestAuthPlugIn class], @"Session Manager choose the right service based in its name");
+}
+
+@end

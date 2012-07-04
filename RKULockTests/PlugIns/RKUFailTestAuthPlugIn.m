@@ -1,13 +1,13 @@
 //
-//  RKULockTests.h
-//  RKULockTests
+//  RKUFailTestAuthPlugIn.m
+//  RKULock
 //
 //  Created by Luis Alberto Hernández Guzmán on 7/4/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import "RKUFailTestAuthPlugIn.h"
 
-@interface RKULockTests : SenTestCase
+@implementation RKUFailTestAuthPlugIn
 
 @end
