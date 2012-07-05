@@ -9,6 +9,8 @@ build/*
 *.mode1v3
 xcuserdata
 Snapshots
+Pods
+Podfile.lock
 
 # osx noise
 .DS_Store

@@ -1,542 +1,1532 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		D1AE825A15A4E46000DE7655 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AE825915A4E46000DE7655 /* Foundation.framework */; };
-		D1AE826015A4E46000DE7655 /* RKULock.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE825F15A4E46000DE7655 /* RKULock.m */; };
-		D1AE826815A4E46000DE7655 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AE826715A4E46000DE7655 /* SenTestingKit.framework */; };
-		D1AE826A15A4E46000DE7655 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AE826915A4E46000DE7655 /* UIKit.framework */; };
-		D1AE826B15A4E46000DE7655 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AE825915A4E46000DE7655 /* Foundation.framework */; };
-		D1AE826E15A4E46000DE7655 /* libRKULock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AE825615A4E46000DE7655 /* libRKULock.a */; };
-		D1AE827415A4E46000DE7655 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D1AE827215A4E46000DE7655 /* InfoPlist.strings */; };
-		D1AE828315A4E52400DE7655 /* RKUSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D1AE828115A4E52400DE7655 /* RKUSessionManager.h */; };
-		D1AE828415A4E52400DE7655 /* RKUSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE828215A4E52400DE7655 /* RKUSessionManager.m */; };
-		D1AE828515A4E52400DE7655 /* RKUSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE828215A4E52400DE7655 /* RKUSessionManager.m */; };
-		D1AE829715A4E6F700DE7655 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = D1AE828815A4E6F700DE7655 /* LICENSE */; };
-		D1AE829815A4E6F700DE7655 /* MARTNSObject.h in Headers */ = {isa = PBXBuildFile; fileRef = D1AE828915A4E6F700DE7655 /* MARTNSObject.h */; };
-		D1AE829915A4E6F700DE7655 /* MARTNSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE828A15A4E6F700DE7655 /* MARTNSObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D1AE829A15A4E6F700DE7655 /* MARTNSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE828A15A4E6F700DE7655 /* MARTNSObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D1AE829B15A4E6F700DE7655 /* RTIvar.h in Headers */ = {isa = PBXBuildFile; fileRef = D1AE828B15A4E6F700DE7655 /* RTIvar.h */; };
-		D1AE829C15A4E6F700DE7655 /* RTIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE828C15A4E6F700DE7655 /* RTIvar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D1AE829D15A4E6F700DE7655 /* RTIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE828C15A4E6F700DE7655 /* RTIvar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D1AE829E15A4E6F700DE7655 /* RTMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = D1AE828D15A4E6F700DE7655 /* RTMethod.h */; };
-		D1AE829F15A4E6F700DE7655 /* RTMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE828E15A4E6F700DE7655 /* RTMethod.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D1AE82A015A4E6F700DE7655 /* RTMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE828E15A4E6F700DE7655 /* RTMethod.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D1AE82A115A4E6F700DE7655 /* RTProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = D1AE828F15A4E6F700DE7655 /* RTProperty.h */; };
-		D1AE82A215A4E6F700DE7655 /* RTProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE829015A4E6F700DE7655 /* RTProperty.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D1AE82A315A4E6F700DE7655 /* RTProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE829015A4E6F700DE7655 /* RTProperty.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D1AE82A415A4E6F700DE7655 /* RTProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = D1AE829115A4E6F700DE7655 /* RTProtocol.h */; };
-		D1AE82A515A4E6F700DE7655 /* RTProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE829215A4E6F700DE7655 /* RTProtocol.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D1AE82A615A4E6F700DE7655 /* RTProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE829215A4E6F700DE7655 /* RTProtocol.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D1AE82A715A4E6F700DE7655 /* RTUnregisteredClass.h in Headers */ = {isa = PBXBuildFile; fileRef = D1AE829315A4E6F700DE7655 /* RTUnregisteredClass.h */; };
-		D1AE82A815A4E6F700DE7655 /* RTUnregisteredClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE829415A4E6F700DE7655 /* RTUnregisteredClass.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D1AE82A915A4E6F700DE7655 /* RTUnregisteredClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE829415A4E6F700DE7655 /* RTUnregisteredClass.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D1AE82AF15A4E79C00DE7655 /* RKUAuthPlugIn.h in Headers */ = {isa = PBXBuildFile; fileRef = D1AE82AE15A4E79C00DE7655 /* RKUAuthPlugIn.h */; };
-		D1AE82B315A4E7D800DE7655 /* RKUTestAuthPlugIn.h in Headers */ = {isa = PBXBuildFile; fileRef = D1AE82B115A4E7D800DE7655 /* RKUTestAuthPlugIn.h */; };
-		D1AE82B415A4E7D800DE7655 /* RKUTestAuthPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE82B215A4E7D800DE7655 /* RKUTestAuthPlugIn.m */; };
-		D1AE82B515A4E7D800DE7655 /* RKUTestAuthPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE82B215A4E7D800DE7655 /* RKUTestAuthPlugIn.m */; };
-		D1AE82B915A4E84100DE7655 /* RKUSessionManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE82B815A4E84100DE7655 /* RKUSessionManagerTest.m */; };
-		D1AE82BF15A4F88C00DE7655 /* RKUAuthPlugInFail.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE82BE15A4F88C00DE7655 /* RKUAuthPlugInFail.m */; };
-		D1AE82C215A4F8A900DE7655 /* RKUFailTestAuthPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE82C115A4F8A900DE7655 /* RKUFailTestAuthPlugIn.m */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		D1AE826C15A4E46000DE7655 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D1AE824D15A4E46000DE7655 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D1AE825515A4E46000DE7655;
-			remoteInfo = RKULock;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		D1AE825615A4E46000DE7655 /* libRKULock.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRKULock.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D1AE825915A4E46000DE7655 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D1AE825D15A4E46000DE7655 /* RKULock-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RKULock-Prefix.pch"; sourceTree = "<group>"; };
-		D1AE825E15A4E46000DE7655 /* RKULock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RKULock.h; sourceTree = "<group>"; };
-		D1AE825F15A4E46000DE7655 /* RKULock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RKULock.m; sourceTree = "<group>"; };
-		D1AE826615A4E46000DE7655 /* RKULockTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RKULockTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D1AE826715A4E46000DE7655 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		D1AE826915A4E46000DE7655 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		D1AE827115A4E46000DE7655 /* RKULockTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RKULockTests-Info.plist"; sourceTree = "<group>"; };
-		D1AE827315A4E46000DE7655 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D1AE828115A4E52400DE7655 /* RKUSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RKUSessionManager.h; path = Manager/RKUSessionManager.h; sourceTree = "<group>"; };
-		D1AE828215A4E52400DE7655 /* RKUSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RKUSessionManager.m; path = Manager/RKUSessionManager.m; sourceTree = "<group>"; };
-		D1AE828815A4E6F700DE7655 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = Libraries/MAObjRuntime/LICENSE; sourceTree = "<group>"; };
-		D1AE828915A4E6F700DE7655 /* MARTNSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MARTNSObject.h; path = Libraries/MAObjRuntime/MARTNSObject.h; sourceTree = "<group>"; };
-		D1AE828A15A4E6F700DE7655 /* MARTNSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MARTNSObject.m; path = Libraries/MAObjRuntime/MARTNSObject.m; sourceTree = "<group>"; };
-		D1AE828B15A4E6F700DE7655 /* RTIvar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTIvar.h; path = Libraries/MAObjRuntime/RTIvar.h; sourceTree = "<group>"; };
-		D1AE828C15A4E6F700DE7655 /* RTIvar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTIvar.m; path = Libraries/MAObjRuntime/RTIvar.m; sourceTree = "<group>"; };
-		D1AE828D15A4E6F700DE7655 /* RTMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTMethod.h; path = Libraries/MAObjRuntime/RTMethod.h; sourceTree = "<group>"; };
-		D1AE828E15A4E6F700DE7655 /* RTMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTMethod.m; path = Libraries/MAObjRuntime/RTMethod.m; sourceTree = "<group>"; };
-		D1AE828F15A4E6F700DE7655 /* RTProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTProperty.h; path = Libraries/MAObjRuntime/RTProperty.h; sourceTree = "<group>"; };
-		D1AE829015A4E6F700DE7655 /* RTProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTProperty.m; path = Libraries/MAObjRuntime/RTProperty.m; sourceTree = "<group>"; };
-		D1AE829115A4E6F700DE7655 /* RTProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTProtocol.h; path = Libraries/MAObjRuntime/RTProtocol.h; sourceTree = "<group>"; };
-		D1AE829215A4E6F700DE7655 /* RTProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTProtocol.m; path = Libraries/MAObjRuntime/RTProtocol.m; sourceTree = "<group>"; };
-		D1AE829315A4E6F700DE7655 /* RTUnregisteredClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTUnregisteredClass.h; path = Libraries/MAObjRuntime/RTUnregisteredClass.h; sourceTree = "<group>"; };
-		D1AE829415A4E6F700DE7655 /* RTUnregisteredClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTUnregisteredClass.m; path = Libraries/MAObjRuntime/RTUnregisteredClass.m; sourceTree = "<group>"; };
-		D1AE82AE15A4E79C00DE7655 /* RKUAuthPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RKUAuthPlugIn.h; path = Protocols/RKUAuthPlugIn.h; sourceTree = "<group>"; };
-		D1AE82B115A4E7D800DE7655 /* RKUTestAuthPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RKUTestAuthPlugIn.h; path = PlugIns/RKUTestAuthPlugIn.h; sourceTree = "<group>"; };
-		D1AE82B215A4E7D800DE7655 /* RKUTestAuthPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RKUTestAuthPlugIn.m; path = PlugIns/RKUTestAuthPlugIn.m; sourceTree = "<group>"; };
-		D1AE82B715A4E84100DE7655 /* RKUSessionManagerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RKUSessionManagerTest.h; path = Manager/RKUSessionManagerTest.h; sourceTree = "<group>"; };
-		D1AE82B815A4E84100DE7655 /* RKUSessionManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RKUSessionManagerTest.m; path = Manager/RKUSessionManagerTest.m; sourceTree = "<group>"; };
-		D1AE82BD15A4F88C00DE7655 /* RKUAuthPlugInFail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RKUAuthPlugInFail.h; path = PlugIns/RKUAuthPlugInFail.h; sourceTree = "<group>"; };
-		D1AE82BE15A4F88C00DE7655 /* RKUAuthPlugInFail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RKUAuthPlugInFail.m; path = PlugIns/RKUAuthPlugInFail.m; sourceTree = "<group>"; };
-		D1AE82C015A4F8A900DE7655 /* RKUFailTestAuthPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RKUFailTestAuthPlugIn.h; path = PlugIns/RKUFailTestAuthPlugIn.h; sourceTree = "<group>"; };
-		D1AE82C115A4F8A900DE7655 /* RKUFailTestAuthPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RKUFailTestAuthPlugIn.m; path = PlugIns/RKUFailTestAuthPlugIn.m; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		D1AE825315A4E46000DE7655 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D1AE825A15A4E46000DE7655 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D1AE826215A4E46000DE7655 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D1AE826815A4E46000DE7655 /* SenTestingKit.framework in Frameworks */,
-				D1AE826A15A4E46000DE7655 /* UIKit.framework in Frameworks */,
-				D1AE826B15A4E46000DE7655 /* Foundation.framework in Frameworks */,
-				D1AE826E15A4E46000DE7655 /* libRKULock.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		D1AE824B15A4E46000DE7655 = {
-			isa = PBXGroup;
-			children = (
-				D1AE828715A4E6E900DE7655 /* Libraries */,
-				D1AE825B15A4E46000DE7655 /* RKULock */,
-				D1AE826F15A4E46000DE7655 /* RKULockTests */,
-				D1AE825815A4E46000DE7655 /* Frameworks */,
-				D1AE825715A4E46000DE7655 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		D1AE825715A4E46000DE7655 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D1AE825615A4E46000DE7655 /* libRKULock.a */,
-				D1AE826615A4E46000DE7655 /* RKULockTests.octest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		D1AE825815A4E46000DE7655 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D1AE825915A4E46000DE7655 /* Foundation.framework */,
-				D1AE826715A4E46000DE7655 /* SenTestingKit.framework */,
-				D1AE826915A4E46000DE7655 /* UIKit.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D1AE825B15A4E46000DE7655 /* RKULock */ = {
-			isa = PBXGroup;
-			children = (
-				D1AE82AD15A4E76E00DE7655 /* Protocols */,
-				D1AE828015A4E4DA00DE7655 /* Manager */,
-				D1AE825E15A4E46000DE7655 /* RKULock.h */,
-				D1AE825F15A4E46000DE7655 /* RKULock.m */,
-				D1AE825C15A4E46000DE7655 /* Supporting Files */,
-			);
-			path = RKULock;
-			sourceTree = "<group>";
-		};
-		D1AE825C15A4E46000DE7655 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D1AE825D15A4E46000DE7655 /* RKULock-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D1AE826F15A4E46000DE7655 /* RKULockTests */ = {
-			isa = PBXGroup;
-			children = (
-				D1AE82B615A4E80500DE7655 /* Manager */,
-				D1AE82B015A4E7B400DE7655 /* PlugIns */,
-				D1AE827015A4E46000DE7655 /* Supporting Files */,
-			);
-			path = RKULockTests;
-			sourceTree = "<group>";
-		};
-		D1AE827015A4E46000DE7655 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D1AE827115A4E46000DE7655 /* RKULockTests-Info.plist */,
-				D1AE827215A4E46000DE7655 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D1AE828015A4E4DA00DE7655 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				D1AE828115A4E52400DE7655 /* RKUSessionManager.h */,
-				D1AE828215A4E52400DE7655 /* RKUSessionManager.m */,
-			);
-			name = Manager;
-			sourceTree = "<group>";
-		};
-		D1AE828715A4E6E900DE7655 /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-				D1AE828815A4E6F700DE7655 /* LICENSE */,
-				D1AE828915A4E6F700DE7655 /* MARTNSObject.h */,
-				D1AE828A15A4E6F700DE7655 /* MARTNSObject.m */,
-				D1AE828B15A4E6F700DE7655 /* RTIvar.h */,
-				D1AE828C15A4E6F700DE7655 /* RTIvar.m */,
-				D1AE828D15A4E6F700DE7655 /* RTMethod.h */,
-				D1AE828E15A4E6F700DE7655 /* RTMethod.m */,
-				D1AE828F15A4E6F700DE7655 /* RTProperty.h */,
-				D1AE829015A4E6F700DE7655 /* RTProperty.m */,
-				D1AE829115A4E6F700DE7655 /* RTProtocol.h */,
-				D1AE829215A4E6F700DE7655 /* RTProtocol.m */,
-				D1AE829315A4E6F700DE7655 /* RTUnregisteredClass.h */,
-				D1AE829415A4E6F700DE7655 /* RTUnregisteredClass.m */,
-			);
-			name = Libraries;
-			sourceTree = "<group>";
-		};
-		D1AE82AD15A4E76E00DE7655 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				D1AE82AE15A4E79C00DE7655 /* RKUAuthPlugIn.h */,
-			);
-			name = Protocols;
-			sourceTree = "<group>";
-		};
-		D1AE82B015A4E7B400DE7655 /* PlugIns */ = {
-			isa = PBXGroup;
-			children = (
-				D1AE82B115A4E7D800DE7655 /* RKUTestAuthPlugIn.h */,
-				D1AE82B215A4E7D800DE7655 /* RKUTestAuthPlugIn.m */,
-				D1AE82BD15A4F88C00DE7655 /* RKUAuthPlugInFail.h */,
-				D1AE82BE15A4F88C00DE7655 /* RKUAuthPlugInFail.m */,
-				D1AE82C015A4F8A900DE7655 /* RKUFailTestAuthPlugIn.h */,
-				D1AE82C115A4F8A900DE7655 /* RKUFailTestAuthPlugIn.m */,
-			);
-			name = PlugIns;
-			sourceTree = "<group>";
-		};
-		D1AE82B615A4E80500DE7655 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				D1AE82B715A4E84100DE7655 /* RKUSessionManagerTest.h */,
-				D1AE82B815A4E84100DE7655 /* RKUSessionManagerTest.m */,
-			);
-			name = Manager;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		D1AE825415A4E46000DE7655 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D1AE828315A4E52400DE7655 /* RKUSessionManager.h in Headers */,
-				D1AE829815A4E6F700DE7655 /* MARTNSObject.h in Headers */,
-				D1AE829B15A4E6F700DE7655 /* RTIvar.h in Headers */,
-				D1AE829E15A4E6F700DE7655 /* RTMethod.h in Headers */,
-				D1AE82A115A4E6F700DE7655 /* RTProperty.h in Headers */,
-				D1AE82A415A4E6F700DE7655 /* RTProtocol.h in Headers */,
-				D1AE82A715A4E6F700DE7655 /* RTUnregisteredClass.h in Headers */,
-				D1AE82AF15A4E79C00DE7655 /* RKUAuthPlugIn.h in Headers */,
-				D1AE82B315A4E7D800DE7655 /* RKUTestAuthPlugIn.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
-/* Begin PBXNativeTarget section */
-		D1AE825515A4E46000DE7655 /* RKULock */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D1AE827A15A4E46000DE7655 /* Build configuration list for PBXNativeTarget "RKULock" */;
-			buildPhases = (
-				D1AE825215A4E46000DE7655 /* Sources */,
-				D1AE825315A4E46000DE7655 /* Frameworks */,
-				D1AE825415A4E46000DE7655 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = RKULock;
-			productName = RKULock;
-			productReference = D1AE825615A4E46000DE7655 /* libRKULock.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		D1AE826515A4E46000DE7655 /* RKULockTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D1AE827D15A4E46000DE7655 /* Build configuration list for PBXNativeTarget "RKULockTests" */;
-			buildPhases = (
-				D1AE826115A4E46000DE7655 /* Sources */,
-				D1AE826215A4E46000DE7655 /* Frameworks */,
-				D1AE826315A4E46000DE7655 /* Resources */,
-				D1AE826415A4E46000DE7655 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D1AE826D15A4E46000DE7655 /* PBXTargetDependency */,
-			);
-			name = RKULockTests;
-			productName = RKULockTests;
-			productReference = D1AE826615A4E46000DE7655 /* RKULockTests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		D1AE824D15A4E46000DE7655 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0430;
-			};
-			buildConfigurationList = D1AE825015A4E46000DE7655 /* Build configuration list for PBXProject "RKULock" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-			);
-			mainGroup = D1AE824B15A4E46000DE7655;
-			productRefGroup = D1AE825715A4E46000DE7655 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				D1AE825515A4E46000DE7655 /* RKULock */,
-				D1AE826515A4E46000DE7655 /* RKULockTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		D1AE826315A4E46000DE7655 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D1AE827415A4E46000DE7655 /* InfoPlist.strings in Resources */,
-				D1AE829715A4E6F700DE7655 /* LICENSE in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		D1AE826415A4E46000DE7655 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		D1AE825215A4E46000DE7655 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D1AE826015A4E46000DE7655 /* RKULock.m in Sources */,
-				D1AE828415A4E52400DE7655 /* RKUSessionManager.m in Sources */,
-				D1AE829915A4E6F700DE7655 /* MARTNSObject.m in Sources */,
-				D1AE829C15A4E6F700DE7655 /* RTIvar.m in Sources */,
-				D1AE829F15A4E6F700DE7655 /* RTMethod.m in Sources */,
-				D1AE82A215A4E6F700DE7655 /* RTProperty.m in Sources */,
-				D1AE82A515A4E6F700DE7655 /* RTProtocol.m in Sources */,
-				D1AE82A815A4E6F700DE7655 /* RTUnregisteredClass.m in Sources */,
-				D1AE82B415A4E7D800DE7655 /* RKUTestAuthPlugIn.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D1AE826115A4E46000DE7655 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D1AE828515A4E52400DE7655 /* RKUSessionManager.m in Sources */,
-				D1AE829A15A4E6F700DE7655 /* MARTNSObject.m in Sources */,
-				D1AE829D15A4E6F700DE7655 /* RTIvar.m in Sources */,
-				D1AE82A015A4E6F700DE7655 /* RTMethod.m in Sources */,
-				D1AE82A315A4E6F700DE7655 /* RTProperty.m in Sources */,
-				D1AE82A615A4E6F700DE7655 /* RTProtocol.m in Sources */,
-				D1AE82A915A4E6F700DE7655 /* RTUnregisteredClass.m in Sources */,
-				D1AE82B515A4E7D800DE7655 /* RKUTestAuthPlugIn.m in Sources */,
-				D1AE82B915A4E84100DE7655 /* RKUSessionManagerTest.m in Sources */,
-				D1AE82BF15A4F88C00DE7655 /* RKUAuthPlugInFail.m in Sources */,
-				D1AE82C215A4F8A900DE7655 /* RKUFailTestAuthPlugIn.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D1AE826D15A4E46000DE7655 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D1AE825515A4E46000DE7655 /* RKULock */;
-			targetProxy = D1AE826C15A4E46000DE7655 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		D1AE827215A4E46000DE7655 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D1AE827315A4E46000DE7655 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		D1AE827815A4E46000DE7655 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				SDKROOT = iphoneos;
-			};
-			name = Debug;
-		};
-		D1AE827915A4E46000DE7655 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				COPY_PHASE_STRIP = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		D1AE827B15A4E46000DE7655 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DSTROOT = /tmp/RKULock.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RKULock/RKULock-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		D1AE827C15A4E46000DE7655 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DSTROOT = /tmp/RKULock.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RKULock/RKULock-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		D1AE827E15A4E46000DE7655 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RKULock/RKULock-Prefix.pch";
-				INFOPLIST_FILE = "RKULockTests/RKULockTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		D1AE827F15A4E46000DE7655 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RKULock/RKULock-Prefix.pch";
-				INFOPLIST_FILE = "RKULockTests/RKULockTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		D1AE825015A4E46000DE7655 /* Build configuration list for PBXProject "RKULock" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D1AE827815A4E46000DE7655 /* Debug */,
-				D1AE827915A4E46000DE7655 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D1AE827A15A4E46000DE7655 /* Build configuration list for PBXNativeTarget "RKULock" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D1AE827B15A4E46000DE7655 /* Debug */,
-				D1AE827C15A4E46000DE7655 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		D1AE827D15A4E46000DE7655 /* Build configuration list for PBXNativeTarget "RKULockTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D1AE827E15A4E46000DE7655 /* Debug */,
-				D1AE827F15A4E46000DE7655 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = D1AE824D15A4E46000DE7655 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>1E2687A5D05A4962A97DBADD</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Pods-resources.sh"
+</string>
+		</dict>
+		<key>22662F3D1DDC402DBB7B0099</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libPods.a</string>
+			<key>path</key>
+			<string>libPods.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>6CA3E3F04F894A81BF270D7A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>22662F3D1DDC402DBB7B0099</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D1AE824B15A4E46000DE7655</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D1AE828715A4E6E900DE7655</string>
+				<string>D1AE825B15A4E46000DE7655</string>
+				<string>D1AE826F15A4E46000DE7655</string>
+				<string>D1AE825815A4E46000DE7655</string>
+				<string>D1AE825715A4E46000DE7655</string>
+				<string>E2494238A20E4DEEBED62585</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE824D15A4E46000DE7655</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0430</string>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>D1AE825015A4E46000DE7655</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>D1AE824B15A4E46000DE7655</string>
+			<key>productRefGroup</key>
+			<string>D1AE825715A4E46000DE7655</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>D1AE825515A4E46000DE7655</string>
+				<string>D1AE826515A4E46000DE7655</string>
+			</array>
+		</dict>
+		<key>D1AE825015A4E46000DE7655</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>D1AE827815A4E46000DE7655</string>
+				<string>D1AE827915A4E46000DE7655</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>D1AE825215A4E46000DE7655</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D1AE826015A4E46000DE7655</string>
+				<string>D1AE828415A4E52400DE7655</string>
+				<string>D1AE829915A4E6F700DE7655</string>
+				<string>D1AE829C15A4E6F700DE7655</string>
+				<string>D1AE829F15A4E6F700DE7655</string>
+				<string>D1AE82A215A4E6F700DE7655</string>
+				<string>D1AE82A515A4E6F700DE7655</string>
+				<string>D1AE82A815A4E6F700DE7655</string>
+				<string>D1AE82B415A4E7D800DE7655</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D1AE825315A4E46000DE7655</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D1AE825A15A4E46000DE7655</string>
+				<string>6CA3E3F04F894A81BF270D7A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D1AE825415A4E46000DE7655</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D1AE828315A4E52400DE7655</string>
+				<string>D1AE829815A4E6F700DE7655</string>
+				<string>D1AE829B15A4E6F700DE7655</string>
+				<string>D1AE829E15A4E6F700DE7655</string>
+				<string>D1AE82A115A4E6F700DE7655</string>
+				<string>D1AE82A415A4E6F700DE7655</string>
+				<string>D1AE82A715A4E6F700DE7655</string>
+				<string>D1AE82AF15A4E79C00DE7655</string>
+				<string>D1AE82B315A4E7D800DE7655</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D1AE825515A4E46000DE7655</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>D1AE827A15A4E46000DE7655</string>
+			<key>buildPhases</key>
+			<array>
+				<string>D1AE825215A4E46000DE7655</string>
+				<string>D1AE825315A4E46000DE7655</string>
+				<string>D1AE825415A4E46000DE7655</string>
+				<string>1E2687A5D05A4962A97DBADD</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>RKULock</string>
+			<key>productName</key>
+			<string>RKULock</string>
+			<key>productReference</key>
+			<string>D1AE825615A4E46000DE7655</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>D1AE825615A4E46000DE7655</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libRKULock.a</string>
+			<key>path</key>
+			<string>libRKULock.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>D1AE825715A4E46000DE7655</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D1AE825615A4E46000DE7655</string>
+				<string>D1AE826615A4E46000DE7655</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE825815A4E46000DE7655</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D1AE825915A4E46000DE7655</string>
+				<string>D1AE826715A4E46000DE7655</string>
+				<string>D1AE826915A4E46000DE7655</string>
+				<string>22662F3D1DDC402DBB7B0099</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE825915A4E46000DE7655</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>D1AE825A15A4E46000DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE825915A4E46000DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D1AE825B15A4E46000DE7655</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D1AE82AD15A4E76E00DE7655</string>
+				<string>D1AE828015A4E4DA00DE7655</string>
+				<string>D1AE825E15A4E46000DE7655</string>
+				<string>D1AE825F15A4E46000DE7655</string>
+				<string>D1AE825C15A4E46000DE7655</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>RKULock</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE825C15A4E46000DE7655</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D1AE825D15A4E46000DE7655</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE825D15A4E46000DE7655</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>RKULock-Prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE825E15A4E46000DE7655</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>RKULock.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE825F15A4E46000DE7655</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>RKULock.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE826015A4E46000DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE825F15A4E46000DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D1AE826115A4E46000DE7655</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D1AE828515A4E52400DE7655</string>
+				<string>D1AE829A15A4E6F700DE7655</string>
+				<string>D1AE829D15A4E6F700DE7655</string>
+				<string>D1AE82A015A4E6F700DE7655</string>
+				<string>D1AE82A315A4E6F700DE7655</string>
+				<string>D1AE82A615A4E6F700DE7655</string>
+				<string>D1AE82A915A4E6F700DE7655</string>
+				<string>D1AE82B515A4E7D800DE7655</string>
+				<string>D1AE82B915A4E84100DE7655</string>
+				<string>D1AE82BF15A4F88C00DE7655</string>
+				<string>D1AE82C215A4F8A900DE7655</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D1AE826215A4E46000DE7655</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D1AE826815A4E46000DE7655</string>
+				<string>D1AE826A15A4E46000DE7655</string>
+				<string>D1AE826B15A4E46000DE7655</string>
+				<string>D1AE826E15A4E46000DE7655</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D1AE826315A4E46000DE7655</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D1AE827415A4E46000DE7655</string>
+				<string>D1AE829715A4E6F700DE7655</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D1AE826415A4E46000DE7655</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string># Run the unit tests in this test bundle.
+"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests"
+</string>
+		</dict>
+		<key>D1AE826515A4E46000DE7655</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>D1AE827D15A4E46000DE7655</string>
+			<key>buildPhases</key>
+			<array>
+				<string>D1AE826115A4E46000DE7655</string>
+				<string>D1AE826215A4E46000DE7655</string>
+				<string>D1AE826315A4E46000DE7655</string>
+				<string>D1AE826415A4E46000DE7655</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>D1AE826D15A4E46000DE7655</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>RKULockTests</string>
+			<key>productName</key>
+			<string>RKULockTests</string>
+			<key>productReference</key>
+			<string>D1AE826615A4E46000DE7655</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle</string>
+		</dict>
+		<key>D1AE826615A4E46000DE7655</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>RKULockTests.octest</string>
+			<key>path</key>
+			<string>RKULockTests.octest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>D1AE826715A4E46000DE7655</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>SenTestingKit.framework</string>
+			<key>path</key>
+			<string>Library/Frameworks/SenTestingKit.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>D1AE826815A4E46000DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE826715A4E46000DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D1AE826915A4E46000DE7655</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>UIKit.framework</string>
+			<key>path</key>
+			<string>Library/Frameworks/UIKit.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>D1AE826A15A4E46000DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE826915A4E46000DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D1AE826B15A4E46000DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE825915A4E46000DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D1AE826C15A4E46000DE7655</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D1AE824D15A4E46000DE7655</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>D1AE825515A4E46000DE7655</string>
+			<key>remoteInfo</key>
+			<string>RKULock</string>
+		</dict>
+		<key>D1AE826D15A4E46000DE7655</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>D1AE825515A4E46000DE7655</string>
+			<key>targetProxy</key>
+			<string>D1AE826C15A4E46000DE7655</string>
+		</dict>
+		<key>D1AE826E15A4E46000DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE825615A4E46000DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D1AE826F15A4E46000DE7655</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D1AE82B615A4E80500DE7655</string>
+				<string>D1AE82B015A4E7B400DE7655</string>
+				<string>D1AE827015A4E46000DE7655</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>RKULockTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE827015A4E46000DE7655</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D1AE827115A4E46000DE7655</string>
+				<string>D1AE827215A4E46000DE7655</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE827115A4E46000DE7655</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>RKULockTests-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE827215A4E46000DE7655</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D1AE827315A4E46000DE7655</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE827315A4E46000DE7655</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE827415A4E46000DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE827215A4E46000DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D1AE827815A4E46000DE7655</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>ARCHS</key>
+				<string>$(ARCHS_STANDARD_32_BIT)</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_VERSION</key>
+				<string>com.apple.compilers.llvm.clang.1_0</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>5.1</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>D1AE827915A4E46000DE7655</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>ARCHS</key>
+				<string>$(ARCHS_STANDARD_32_BIT)</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_VERSION</key>
+				<string>com.apple.compilers.llvm.clang.1_0</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>5.1</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>D1AE827A15A4E46000DE7655</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>D1AE827B15A4E46000DE7655</string>
+				<string>D1AE827C15A4E46000DE7655</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>D1AE827B15A4E46000DE7655</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>E2494238A20E4DEEBED62585</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>DSTROOT</key>
+				<string>/tmp/RKULock.dst</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>RKULock/RKULock-Prefix.pch</string>
+				<key>OTHER_LDFLAGS</key>
+				<string>-ObjC</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>D1AE827C15A4E46000DE7655</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>E2494238A20E4DEEBED62585</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>DSTROOT</key>
+				<string>/tmp/RKULock.dst</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>RKULock/RKULock-Prefix.pch</string>
+				<key>OTHER_LDFLAGS</key>
+				<string>-ObjC</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>D1AE827D15A4E46000DE7655</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>D1AE827E15A4E46000DE7655</string>
+				<string>D1AE827F15A4E46000DE7655</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>D1AE827E15A4E46000DE7655</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(DEVELOPER_LIBRARY_DIR)/Frameworks</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>RKULock/RKULock-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>RKULockTests/RKULockTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>octest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>D1AE827F15A4E46000DE7655</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(DEVELOPER_LIBRARY_DIR)/Frameworks</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>RKULock/RKULock-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>RKULockTests/RKULockTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>octest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>D1AE828015A4E4DA00DE7655</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D1AE828115A4E52400DE7655</string>
+				<string>D1AE828215A4E52400DE7655</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Manager</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE828115A4E52400DE7655</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>RKUSessionManager.h</string>
+			<key>path</key>
+			<string>Manager/RKUSessionManager.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE828215A4E52400DE7655</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>RKUSessionManager.m</string>
+			<key>path</key>
+			<string>Manager/RKUSessionManager.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE828315A4E52400DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE828115A4E52400DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D1AE828415A4E52400DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE828215A4E52400DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D1AE828515A4E52400DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE828215A4E52400DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D1AE828715A4E6E900DE7655</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D1AE828815A4E6F700DE7655</string>
+				<string>D1AE828915A4E6F700DE7655</string>
+				<string>D1AE828A15A4E6F700DE7655</string>
+				<string>D1AE828B15A4E6F700DE7655</string>
+				<string>D1AE828C15A4E6F700DE7655</string>
+				<string>D1AE828D15A4E6F700DE7655</string>
+				<string>D1AE828E15A4E6F700DE7655</string>
+				<string>D1AE828F15A4E6F700DE7655</string>
+				<string>D1AE829015A4E6F700DE7655</string>
+				<string>D1AE829115A4E6F700DE7655</string>
+				<string>D1AE829215A4E6F700DE7655</string>
+				<string>D1AE829315A4E6F700DE7655</string>
+				<string>D1AE829415A4E6F700DE7655</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Libraries</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE828815A4E6F700DE7655</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>name</key>
+			<string>LICENSE</string>
+			<key>path</key>
+			<string>Libraries/MAObjRuntime/LICENSE</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE828915A4E6F700DE7655</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MARTNSObject.h</string>
+			<key>path</key>
+			<string>Libraries/MAObjRuntime/MARTNSObject.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE828A15A4E6F700DE7655</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MARTNSObject.m</string>
+			<key>path</key>
+			<string>Libraries/MAObjRuntime/MARTNSObject.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE828B15A4E6F700DE7655</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>RTIvar.h</string>
+			<key>path</key>
+			<string>Libraries/MAObjRuntime/RTIvar.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE828C15A4E6F700DE7655</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>RTIvar.m</string>
+			<key>path</key>
+			<string>Libraries/MAObjRuntime/RTIvar.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE828D15A4E6F700DE7655</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>RTMethod.h</string>
+			<key>path</key>
+			<string>Libraries/MAObjRuntime/RTMethod.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE828E15A4E6F700DE7655</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>RTMethod.m</string>
+			<key>path</key>
+			<string>Libraries/MAObjRuntime/RTMethod.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE828F15A4E6F700DE7655</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>RTProperty.h</string>
+			<key>path</key>
+			<string>Libraries/MAObjRuntime/RTProperty.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE829015A4E6F700DE7655</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>RTProperty.m</string>
+			<key>path</key>
+			<string>Libraries/MAObjRuntime/RTProperty.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE829115A4E6F700DE7655</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>RTProtocol.h</string>
+			<key>path</key>
+			<string>Libraries/MAObjRuntime/RTProtocol.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE829215A4E6F700DE7655</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>RTProtocol.m</string>
+			<key>path</key>
+			<string>Libraries/MAObjRuntime/RTProtocol.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE829315A4E6F700DE7655</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>RTUnregisteredClass.h</string>
+			<key>path</key>
+			<string>Libraries/MAObjRuntime/RTUnregisteredClass.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE829415A4E6F700DE7655</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>RTUnregisteredClass.m</string>
+			<key>path</key>
+			<string>Libraries/MAObjRuntime/RTUnregisteredClass.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE829715A4E6F700DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE828815A4E6F700DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D1AE829815A4E6F700DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE828915A4E6F700DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D1AE829915A4E6F700DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE828A15A4E6F700DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
+		</dict>
+		<key>D1AE829A15A4E6F700DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE828A15A4E6F700DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
+		</dict>
+		<key>D1AE829B15A4E6F700DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE828B15A4E6F700DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D1AE829C15A4E6F700DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE828C15A4E6F700DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
+		</dict>
+		<key>D1AE829D15A4E6F700DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE828C15A4E6F700DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
+		</dict>
+		<key>D1AE829E15A4E6F700DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE828D15A4E6F700DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D1AE829F15A4E6F700DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE828E15A4E6F700DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
+		</dict>
+		<key>D1AE82A015A4E6F700DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE828E15A4E6F700DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
+		</dict>
+		<key>D1AE82A115A4E6F700DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE828F15A4E6F700DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D1AE82A215A4E6F700DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE829015A4E6F700DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
+		</dict>
+		<key>D1AE82A315A4E6F700DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE829015A4E6F700DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
+		</dict>
+		<key>D1AE82A415A4E6F700DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE829115A4E6F700DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D1AE82A515A4E6F700DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE829215A4E6F700DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
+		</dict>
+		<key>D1AE82A615A4E6F700DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE829215A4E6F700DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
+		</dict>
+		<key>D1AE82A715A4E6F700DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE829315A4E6F700DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D1AE82A815A4E6F700DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE829415A4E6F700DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
+		</dict>
+		<key>D1AE82A915A4E6F700DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE829415A4E6F700DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
+		</dict>
+		<key>D1AE82AD15A4E76E00DE7655</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D1AE82AE15A4E79C00DE7655</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Protocols</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE82AE15A4E79C00DE7655</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>RKUAuthPlugIn.h</string>
+			<key>path</key>
+			<string>Protocols/RKUAuthPlugIn.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE82AF15A4E79C00DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE82AE15A4E79C00DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D1AE82B015A4E7B400DE7655</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D1AE82B115A4E7D800DE7655</string>
+				<string>D1AE82B215A4E7D800DE7655</string>
+				<string>D1AE82BD15A4F88C00DE7655</string>
+				<string>D1AE82BE15A4F88C00DE7655</string>
+				<string>D1AE82C015A4F8A900DE7655</string>
+				<string>D1AE82C115A4F8A900DE7655</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>PlugIns</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE82B115A4E7D800DE7655</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>RKUTestAuthPlugIn.h</string>
+			<key>path</key>
+			<string>PlugIns/RKUTestAuthPlugIn.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE82B215A4E7D800DE7655</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>RKUTestAuthPlugIn.m</string>
+			<key>path</key>
+			<string>PlugIns/RKUTestAuthPlugIn.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE82B315A4E7D800DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE82B115A4E7D800DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D1AE82B415A4E7D800DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE82B215A4E7D800DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D1AE82B515A4E7D800DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE82B215A4E7D800DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D1AE82B615A4E80500DE7655</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D1AE82B715A4E84100DE7655</string>
+				<string>D1AE82B815A4E84100DE7655</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Manager</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE82B715A4E84100DE7655</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>RKUSessionManagerTest.h</string>
+			<key>path</key>
+			<string>Manager/RKUSessionManagerTest.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE82B815A4E84100DE7655</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>RKUSessionManagerTest.m</string>
+			<key>path</key>
+			<string>Manager/RKUSessionManagerTest.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE82B915A4E84100DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE82B815A4E84100DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D1AE82BD15A4F88C00DE7655</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>RKUAuthPlugInFail.h</string>
+			<key>path</key>
+			<string>PlugIns/RKUAuthPlugInFail.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE82BE15A4F88C00DE7655</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>RKUAuthPlugInFail.m</string>
+			<key>path</key>
+			<string>PlugIns/RKUAuthPlugInFail.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE82BF15A4F88C00DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE82BE15A4F88C00DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D1AE82C015A4F8A900DE7655</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>RKUFailTestAuthPlugIn.h</string>
+			<key>path</key>
+			<string>PlugIns/RKUFailTestAuthPlugIn.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE82C115A4F8A900DE7655</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>RKUFailTestAuthPlugIn.m</string>
+			<key>path</key>
+			<string>PlugIns/RKUFailTestAuthPlugIn.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1AE82C215A4F8A900DE7655</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1AE82C115A4F8A900DE7655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E2494238A20E4DEEBED62585</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Pods.xcconfig</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>D1AE824D15A4E46000DE7655</string>
+</dict>
+</plist>
