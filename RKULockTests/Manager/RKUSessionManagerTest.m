@@ -32,7 +32,7 @@
 - (void)testAuthenticatesWithCorrectService
 {
 	NSString *testServiceName = @"testService";
-	[self.sessionManager authenticateWithServiceName:testServiceName];
+	[self.sessionManager authenticateWithServiceName:testServiceName usingConfiguration:nil];
 	STAssertEqualObjects(self.sessionManager.currentAuthPluginClass, [RKUTestAuthPlugIn class], @"Session Manager choose the right service based in its name");
 }
 

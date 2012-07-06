@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong) NSArray *pluginClasses;
 @property (nonatomic, assign) Class currentAuthPluginClass;
+@property (nonatomic, strong) id<RKUAuthPlugIn> currentAuthPlugin;
 
 - (NSArray *)arrayWithClasses;
 - (NSArray *)arrayFilteredByNameWithArray:(NSArray *)unfilteredClasses;
@@ -26,6 +27,8 @@
 
 @synthesize pluginClasses = _pluginClasses;
 @synthesize currentAuthPluginClass = _currentAuthPluginClass;
+@synthesize currentAuthPlugin = _currentAuthPlugin;
+@synthesize delegate = _delegate;
 
 __strong static id _sharedObject = nil;
 
@@ -37,7 +40,7 @@ __strong static id _sharedObject = nil;
 	{
 		self.pluginClasses = [self findAuthPluginClassesByConventionAndProtocol];
 	}
-
+  
 	return self;
 }
 
@@ -54,7 +57,7 @@ __strong static id _sharedObject = nil;
 
 - (NSArray *)findAuthPluginClassesByConventionAndProtocol
 {
-
+  
 	NSArray *pluginClasses = [self arrayFilteredByProtocolConformed:[self arrayFilteredByNameWithArray:[self arrayWithClasses]]];
 	return pluginClasses;
 }
@@ -65,7 +68,7 @@ __strong static id _sharedObject = nil;
 	int numClasses;
 	Class *class = NULL;
 	NSMutableArray *classes;
-
+  
 	numClasses = objc_getClassList(NULL, 0);
 	classes = [NSMutableArray arrayWithCapacity:numClasses];
 	
@@ -77,8 +80,8 @@ __strong static id _sharedObject = nil;
 		numClasses = objc_getClassList(class, numClasses);
 		for (int i = 0; i < numClasses; i++) {
 			[classes addObject:[NSString stringWithFormat:@"%s", class_getName(class[i])]];
-
-		NSLog(@"Class name: %s", class_getName(class[i]));
+      
+      NSLog(@"Class name: %s", class_getName(class[i]));
 		}
 		free(class);
 	}
@@ -89,7 +92,7 @@ __strong static id _sharedObject = nil;
 - (NSArray *)arrayFilteredByNameWithArray:(NSArray *)unfilteredClasses
 {
 	NSMutableArray *filteredClasses = [NSMutableArray array];
-
+  
 	for (NSString *className in unfilteredClasses)
 	{
 		NSRange range = [className rangeOfString:@"AuthPlugIn"];
@@ -102,7 +105,7 @@ __strong static id _sharedObject = nil;
 			}
 		}
 	}
-
+  
 	return filteredClasses;
 }
 
@@ -110,23 +113,24 @@ __strong static id _sharedObject = nil;
 - (NSArray *)arrayFilteredByProtocolConformed:(NSArray *)unfilteredClasses
 {
 	NSMutableArray *filteredClasses = [NSMutableArray array];
-
+  
 	for (NSString *className in unfilteredClasses)
 	{
 		Class pluginClass = NSClassFromString(className);
-
+    
 		if ([pluginClass conformsToProtocol:@protocol(RKUAuthPlugIn)])
 		{
 			[filteredClasses addObject:pluginClass];
 		}
 		
 	}
-
+  
 	return filteredClasses;
 }
 
 
-- (void)authenticateWithServiceName:(NSString *)serviceName
+- (void)authenticateWithServiceName:(NSString *)serviceName 
+                 usingConfiguration:(NSDictionary *)configuration
 {
 	self.currentAuthPluginClass = nil;
 	if ([serviceName length]) {
@@ -134,7 +138,20 @@ __strong static id _sharedObject = nil;
 	}
 	if (!self.currentAuthPluginClass) {
 		//TODO notify delegate that the plugin was not found
-	}
+	} else {
+    self.currentAuthPlugin = [[self.currentAuthPluginClass alloc] init];
+    [self.currentAuthPlugin setDelegate:self];
+    [self.currentAuthPlugin configureUsing:configuration];
+    [self.currentAuthPlugin authenticate];
+  }
+}
+
+- (BOOL)handleOpenURLForAuthentication:(NSURL *)url
+{
+  if ([self.currentAuthPlugin respondsToSelector:@selector(authenticateWithUrl:)]) {
+    return [self.currentAuthPlugin authenticateWithUrl:url];
+  }
+  return false;
 }
 
 - (Class)pluginClassWithServiceName:(NSString *)serviceName
@@ -147,6 +164,29 @@ __strong static id _sharedObject = nil;
 		}
 	}
 	return foundClass;
+}
+
+#pragma mark - auth plugin delegate methods
+
+- (void)authPlugin:(id<RKUAuthPlugIn>)authPlugin invalidConfiguration:(NSDictionary *)configuration
+{
+  if ([self.delegate respondsToSelector:@selector(sessionManagerInvalidConfiguration:forService:)]) {
+    [self.delegate sessionManagerInvalidConfiguration:configuration forService:[[authPlugin class] serviceName]];    
+  }
+}
+
+- (void)authPluginDidAuthenticateSuccesfully:(id<RKUAuthPlugIn>)authPlugin
+{
+  if ([self.delegate respondsToSelector:@selector(sessionManagerDidAuthenticateSuccesfuly)]) {
+    [self.delegate sessionManagerDidAuthenticateSuccesfuly];
+  }
+}
+
+- (void)authPluginDidNotAuthenticate:(id<RKUAuthPlugIn>)authPlugin
+{
+  if ([self.delegate respondsToSelector:@selector(sessionManagerDidNotAuthenticate)]) {
+    [self.delegate sessionManagerDidNotAuthenticate];
+  }
 }
 
 
