@@ -10,6 +10,7 @@
 
 
 #import "Facebook.h"
+#import "RKUAuthStore.h"
 #import "RKUAuthPlugIn.h"
 #import "RKUAuthPluginDelegate.h"
 
@@ -17,5 +18,6 @@
 
 @property (nonatomic, weak) id<RKUAuthPlugInDelegate> delegate;
 
+@property (nonatomic, strong) id<RKUAuthStore> authStore;
 
 @end

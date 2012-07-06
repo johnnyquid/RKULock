@@ -15,15 +15,19 @@
 @interface RKUSessionManager : NSObject <RKUAuthPlugInDelegate>
 
 @property (nonatomic, strong, readonly) NSArray *pluginClasses;
-@property (nonatomic, assign, readonly) Class currentAuthPluginClass;
 @property (nonatomic, weak) id<RKUSessionManagerDelegate> delegate;
 
 + (id)sharedInstance;
 
 - (NSArray *)findAuthPluginClassesByConventionAndProtocol;
 
-- (void)authenticateWithServiceName:(NSString *)serviceName 
-                 usingConfiguration:(NSDictionary *)configuration;
+- (void)configureService:(NSString *)serviceName using:(NSDictionary *)configuration;
 
 - (BOOL)handleOpenURLForAuthentication:(NSURL *)url;
+
+- (BOOL)isAuthenticatedInService:(NSString *)serviceName;
+
+- (void)authenticateWithServiceName:(NSString *)serviceName;
+
+- (void)logoutFromService:(NSString *)serviceName;
 @end

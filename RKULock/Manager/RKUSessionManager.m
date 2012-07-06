@@ -7,13 +7,14 @@
 //
 
 #import "RKUSessionManager.h"
+
 #import "RKUAuthPlugIn.h"
-#import "MARTNSObject.h"
+#include "objc/runtime.h"
 
 @interface RKUSessionManager ()
 
 @property (nonatomic, strong) NSArray *pluginClasses;
-@property (nonatomic, assign) Class currentAuthPluginClass;
+@property (nonatomic, strong) NSMutableDictionary *configuredPlugins;
 @property (nonatomic, strong) id<RKUAuthPlugIn> currentAuthPlugin;
 
 - (NSArray *)arrayWithClasses;
@@ -25,10 +26,10 @@
 
 @implementation RKUSessionManager
 
-@synthesize pluginClasses = _pluginClasses;
-@synthesize currentAuthPluginClass = _currentAuthPluginClass;
-@synthesize currentAuthPlugin = _currentAuthPlugin;
 @synthesize delegate = _delegate;
+@synthesize pluginClasses = _pluginClasses;
+@synthesize currentAuthPlugin = _currentAuthPlugin;
+@synthesize configuredPlugins = _configuredPlugins;
 
 __strong static id _sharedObject = nil;
 
@@ -39,6 +40,7 @@ __strong static id _sharedObject = nil;
 	if (self)
 	{
 		self.pluginClasses = [self findAuthPluginClassesByConventionAndProtocol];
+    self.configuredPlugins = [NSMutableDictionary dictionary];
 	}
   
 	return self;
@@ -58,7 +60,8 @@ __strong static id _sharedObject = nil;
 - (NSArray *)findAuthPluginClassesByConventionAndProtocol
 {
   
-	NSArray *pluginClasses = [self arrayFilteredByProtocolConformed:[self arrayFilteredByNameWithArray:[self arrayWithClasses]]];
+	NSArray *pluginClasses = [self arrayFilteredByProtocolConformed:[self arrayFilteredByNameWithArray:
+                                                                   [self arrayWithClasses]]];
 	return pluginClasses;
 }
 
@@ -129,20 +132,53 @@ __strong static id _sharedObject = nil;
 }
 
 
-- (void)authenticateWithServiceName:(NSString *)serviceName 
-                 usingConfiguration:(NSDictionary *)configuration
+- (void)configureService:(NSString *)serviceName using:(NSDictionary *)configuration
 {
-	self.currentAuthPluginClass = nil;
-	if ([serviceName length]) {
-		self.currentAuthPluginClass = [self pluginClassWithServiceName:serviceName];	
-	}
-	if (!self.currentAuthPluginClass) {
-		//TODO notify delegate that the plugin was not found
-	} else {
-    self.currentAuthPlugin = [[self.currentAuthPluginClass alloc] init];
-    [self.currentAuthPlugin setDelegate:self];
-    [self.currentAuthPlugin configureUsing:configuration];
+  Class pluginClass = [self pluginClassWithServiceName:serviceName];	
+  if (![self.configuredPlugins objectForKey:serviceName] && pluginClass && [serviceName length]) {    
+    id<RKUAuthPlugIn> plugin = [[pluginClass alloc] init];
+    [plugin setDelegate:self];
+    [self.configuredPlugins setObject:plugin forKey:serviceName];                        
+  }
+  id<RKUAuthPlugIn> plugin = [self.configuredPlugins objectForKey:serviceName];  
+  if (plugin) {
+    [plugin configureUsing:configuration];
+  } else {
+    //TODO return error
+  }
+  
+}
+
+- (BOOL)isAuthenticatedInService:(NSString *)serviceName
+{
+  if ([self.configuredPlugins objectForKey:serviceName]) {
+    self.currentAuthPlugin = [self.configuredPlugins objectForKey:serviceName];
+    return  [self.currentAuthPlugin isAuthenticated];
+  } else {
+    //TODO error the plugin is not configured    
+  }
+  return NO;
+}
+
+- (void)authenticateWithServiceName:(NSString *)serviceName                  
+{
+  if ([self.configuredPlugins objectForKey:serviceName]) {
+    self.currentAuthPlugin = [self.configuredPlugins objectForKey:serviceName];
     [self.currentAuthPlugin authenticate];
+  } else {
+    //TODO error the plugin is not configured
+    
+  }
+}
+
+- (void)logoutFromService:(NSString *)serviceName
+{
+  if ([self.configuredPlugins objectForKey:serviceName]) {
+    self.currentAuthPlugin = [self.configuredPlugins objectForKey:serviceName];
+    [self.currentAuthPlugin logout];
+  } else {
+    //TODO error the plugin is not configured
+    
   }
 }
 
@@ -171,7 +207,8 @@ __strong static id _sharedObject = nil;
 - (void)authPlugin:(id<RKUAuthPlugIn>)authPlugin invalidConfiguration:(NSDictionary *)configuration
 {
   if ([self.delegate respondsToSelector:@selector(sessionManagerInvalidConfiguration:forService:)]) {
-    [self.delegate sessionManagerInvalidConfiguration:configuration forService:[[authPlugin class] serviceName]];    
+    [self.delegate sessionManagerInvalidConfiguration:configuration 
+                                           forService:[[authPlugin class] serviceName]];    
   }
 }
 

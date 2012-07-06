@@ -17,7 +17,6 @@
 
 
 
-
 - (void)configureUsing:(NSDictionary *)configuration
 {
   
@@ -28,9 +27,22 @@
   
 }
 
+- (BOOL)isAuthenticated
+{
+  return NO;
+}
+
+- (void)logout
+{
+  
+}
 - (void)setDelegate:(id)delegate
 {
   
 }
 
+- (void)setAuthStore:(id<RKUAuthStore>)authStore
+{
+  
+}
 @end
