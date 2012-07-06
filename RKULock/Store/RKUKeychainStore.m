@@ -27,11 +27,11 @@
 - (NSString *)tokenWithServiceName:(NSString *)serviceName
 {
 	NSString *configurationKeySuffix = [self valueForApplicationConfigurationKey:@"KeychainSuffix"];
-	
-	NSString *configurationKey = [NSString stringWithFormat:@"%@%@", serviceName, configurationKeySuffix];
+	NSString *configurationMiddleString = [self valueForApplicationConfigurationKey:@"KeychainTokenString"];
+	NSString *configurationKey = [NSString stringWithFormat:@"%@%@%@", serviceName, configurationMiddleString, configurationKeySuffix];
 	
 	NSString *tokenIdentifier = [self valueForApplicationConfigurationKey:configurationKey];
-  
+	
 	return [self valueForIdentifier:tokenIdentifier];
 }
 
@@ -41,12 +41,13 @@
 	if (token)
 	{
 		NSString *configurationKeySuffix = [self valueForApplicationConfigurationKey:@"KeychainSuffix"];
+		NSString *configurationMiddleString = [self valueForApplicationConfigurationKey:@"KeychainTokenString"];
+		NSString *configurationKey = [NSString stringWithFormat:@"%@%@%@", serviceName, configurationMiddleString, configurationKeySuffix];
 		
-		NSString *configurationKey = [NSString stringWithFormat:@"%@%@", serviceName, configurationKeySuffix];
-		
-    NSString *tokenIdentifier = [self valueForApplicationConfigurationKey:configurationKey];
-    
-    [self setValue:token forIdentifier:tokenIdentifier];
+        NSString *tokenIdentifier = [self valueForApplicationConfigurationKey:configurationKey];
+        
+        [self setValue:token forIdentifier:tokenIdentifier];
+
 	}
 }
 
@@ -54,10 +55,12 @@
 - (void)removeTokenWithServiceName:(NSString *)serviceName
 {
 	NSString *configurationKeySuffix = [self valueForApplicationConfigurationKey:@"KeychainSuffix"];
-  
-	NSString *configurationKey = [NSString stringWithFormat:@"%@%@", serviceName, configurationKeySuffix];
-  
-  [self removeValueForIdentifier:configurationKey];
+	NSString *configurationMiddleString = [self valueForApplicationConfigurationKey:@"KeychainTokenString"];
+	NSString *configurationKey = [NSString stringWithFormat:@"%@%@%@", serviceName, configurationMiddleString, configurationKeySuffix];
+	
+	NSString *tokenIdentifier = [self valueForApplicationConfigurationKey:configurationKey];
+	
+	[self removeValueForIdentifier:tokenIdentifier];
 }
 
 
@@ -68,20 +71,21 @@
 - (NSDate *)tokenExpirationDateWithServiceName:(NSString *)serviceName
 {
 	NSDate *tokenExpirationDate = nil;
-  
+	
 	NSString *configurationKeySuffix = [self valueForApplicationConfigurationKey:@"KeychainSuffix"];
-  
-	NSString *configurationKey = [NSString stringWithFormat:@"%@%@", serviceName, configurationKeySuffix];
-  
-  NSString *tokenExpirationDateIdentifier = [self valueForApplicationConfigurationKey:configurationKey];
-  
-  NSString *expirationDateTimeInterval = [self valueForIdentifier:tokenExpirationDateIdentifier];
-  
+	NSString *configurationMiddleString = [self valueForApplicationConfigurationKey:@"KeychainDateString"];
+	NSString *configurationTokenString = [self valueForApplicationConfigurationKey:@"KeychainTokenString"];
+	NSString *configurationKey = [NSString stringWithFormat:@"%@%@%@%@", serviceName, configurationTokenString, configurationMiddleString, configurationKeySuffix];
+	
+    NSString *tokenExpirationDateIdentifier = [self valueForApplicationConfigurationKey:configurationKey];
+	
+    NSString *expirationDateTimeInterval = [self valueForIdentifier:tokenExpirationDateIdentifier];
+	
 	if (expirationDateTimeInterval)
 	{
 		tokenExpirationDate = [NSDate dateWithTimeIntervalSince1970:[expirationDateTimeInterval doubleValue]];
 	}
-  
+	
 	return tokenExpirationDate;
 }
 
@@ -91,13 +95,14 @@
 	if (tokenExpirationDate)
 	{
 		NSString *expirationDateTimeInterval = [NSString stringWithFormat:@"%f", [tokenExpirationDate timeIntervalSince1970]];
-    
-		NSString *configurationKeySuffix = [self valueForApplicationConfigurationKey:@"KeychainSuffix"];
 		
-		NSString *configurationKey = [NSString stringWithFormat:@"%@%@", serviceName, configurationKeySuffix];
-    
+		NSString *configurationKeySuffix = [self valueForApplicationConfigurationKey:@"KeychainSuffix"];
+		NSString *configurationMiddleString = [self valueForApplicationConfigurationKey:@"KeychainDateString"];
+		NSString *configurationTokenString = [self valueForApplicationConfigurationKey:@"KeychainTokenString"];
+		NSString *configurationKey = [NSString stringWithFormat:@"%@%@%@%@", serviceName, configurationTokenString, configurationMiddleString, configurationKeySuffix];
+		
 		NSString *tokenExpirationDateIdentifier = [self valueForApplicationConfigurationKey:configurationKey];
-    
+		
 		[self setValue:expirationDateTimeInterval forIdentifier:tokenExpirationDateIdentifier];
 	}
 }
@@ -106,10 +111,12 @@
 - (void)removeTokenExpirationDateWithServiceName:(NSString *)serviceName
 {
 	NSString *configurationKeySuffix = [self valueForApplicationConfigurationKey:@"KeychainSuffix"];
-  
-	NSString *configurationKey = [NSString stringWithFormat:@"%@%@", serviceName, configurationKeySuffix];
-  
-	[self removeValueForIdentifier:configurationKey];
+	NSString *configurationMiddleString = [self valueForApplicationConfigurationKey:@"KeychainDateString"];
+	NSString *configurationTokenString = [self valueForApplicationConfigurationKey:@"KeychainTokenString"];
+	NSString *configurationKey = [NSString stringWithFormat:@"%@%@%@%@", serviceName, configurationTokenString, configurationMiddleString, configurationKeySuffix];
+	NSString *tokenExpirationDateIdentifier = [self valueForApplicationConfigurationKey:configurationKey];
+	
+	[self removeValueForIdentifier:tokenExpirationDateIdentifier];
 }
 
 

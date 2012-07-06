@@ -114,6 +114,7 @@
 		D1AE82BE15A4F88C00DE7655 /* RKUAuthPlugInFail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RKUAuthPlugInFail.m; path = PlugIns/RKUAuthPlugInFail.m; sourceTree = "<group>"; };
 		D1AE82C015A4F8A900DE7655 /* RKUFailTestAuthPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RKUFailTestAuthPlugIn.h; path = PlugIns/RKUFailTestAuthPlugIn.h; sourceTree = "<group>"; };
 		D1AE82C115A4F8A900DE7655 /* RKUFailTestAuthPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RKUFailTestAuthPlugIn.m; path = PlugIns/RKUFailTestAuthPlugIn.m; sourceTree = "<group>"; };
+		D1C1AFEB15A78974009BA0AB /* AppConfiguration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppConfiguration.plist; path = Configuration/AppConfiguration.plist; sourceTree = "<group>"; };
 		E2494238A20E4DEEBED62585 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -200,6 +201,7 @@
 		D1AE825B15A4E46000DE7655 /* RKULock */ = {
 			isa = PBXGroup;
 			children = (
+				D1C1AFE915A7894B009BA0AB /* Configuration */,
 				A766307615A75408000686FC /* Store */,
 				A7ECB49515A741420053744D /* AuthPlugins */,
 				D1AE82AD15A4E76E00DE7655 /* Protocols */,
@@ -298,6 +300,14 @@
 				D1AE82B815A4E84100DE7655 /* RKUSessionManagerTest.m */,
 			);
 			name = Manager;
+			sourceTree = "<group>";
+		};
+		D1C1AFE915A7894B009BA0AB /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				D1C1AFEB15A78974009BA0AB /* AppConfiguration.plist */,
+			);
+			name = Configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>KeychainSuffix</key>
+	<string>KeychainKey</string>
+	<key>KeychainTokenString</key>
+	<string>Token</string>
+	<key>KeychainDateString</key>
+	<string>ExpirationDate</string>
+	<key>KeychainAccessGroup</key>
+	<string>2W49H53557.RKU.RKUKeychainPOC</string>
+	<key>facebookTokenKeychainKey</key>
+	<string>facebookToken</string>
+	<key>facebookTokenExpirationDateKeychainKey</key>
+	<string>facebookTokenExpirationDate</string>
+</dict>
+</plist>
