@@ -15,4 +15,22 @@
 	return @"testService";
 }
 
+
+
+
+- (void)configureUsing:(NSDictionary *)configuration
+{
+  
+}
+
+- (void)authenticate
+{
+  
+}
+
+- (void)setDelegate:(id)delegate
+{
+  
+}
+
 @end

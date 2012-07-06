@@ -25,7 +25,7 @@
 	NSArray *array = [self.sessionManager findAuthPluginClassesByConventionAndProtocol];
 	STAssertNotNil(array, @"Finding Plugin classes by Convention returns a valid array");
 
-	NSUInteger expectedArrayCount = 1;
+	NSUInteger expectedArrayCount = 2;
 	STAssertEquals([array count], expectedArrayCount, @"Checking array is not empty");
 }
 

@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22FC315C533E440E9AD78298 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A7FEE12E2D48CDAE492AE6 /* libPods.a */; };
 		6CA3E3F04F894A81BF270D7A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22662F3D1DDC402DBB7B0099 /* libPods.a */; };
+		A766307115A74B5F000686FC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A766307015A74B5F000686FC /* CoreGraphics.framework */; };
 		A7ECB49115A740B10053744D /* RKUAuthPlugInDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A7ECB49015A740B10053744D /* RKUAuthPlugInDelegate.h */; };
 		A7ECB49415A740DD0053744D /* RKUSessionManagerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A7ECB49315A740DD0053744D /* RKUSessionManagerDelegate.h */; };
 		A7ECB49815A741620053744D /* RKUFacebookConnectAuthPlugIn.h in Headers */ = {isa = PBXBuildFile; fileRef = A7ECB49615A741620053744D /* RKUFacebookConnectAuthPlugIn.h */; };
@@ -18,7 +20,6 @@
 		D1AE826815A4E46000DE7655 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AE826715A4E46000DE7655 /* SenTestingKit.framework */; };
 		D1AE826A15A4E46000DE7655 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AE826915A4E46000DE7655 /* UIKit.framework */; };
 		D1AE826B15A4E46000DE7655 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AE825915A4E46000DE7655 /* Foundation.framework */; };
-		D1AE826E15A4E46000DE7655 /* libRKULock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AE825615A4E46000DE7655 /* libRKULock.a */; };
 		D1AE827415A4E46000DE7655 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D1AE827215A4E46000DE7655 /* InfoPlist.strings */; };
 		D1AE828315A4E52400DE7655 /* RKUSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D1AE828115A4E52400DE7655 /* RKUSessionManager.h */; };
 		D1AE828415A4E52400DE7655 /* RKUSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE828215A4E52400DE7655 /* RKUSessionManager.m */; };
@@ -63,18 +64,21 @@
 
 /* Begin PBXFileReference section */
 		22662F3D1DDC402DBB7B0099 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2691184C736346E09CC38870 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		A766307015A74B5F000686FC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		A7ECB49015A740B10053744D /* RKUAuthPlugInDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RKUAuthPlugInDelegate.h; path = Protocols/RKUAuthPlugInDelegate.h; sourceTree = "<group>"; };
 		A7ECB49315A740DD0053744D /* RKUSessionManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RKUSessionManagerDelegate.h; path = Protocols/RKUSessionManagerDelegate.h; sourceTree = "<group>"; };
 		A7ECB49615A741620053744D /* RKUFacebookConnectAuthPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RKUFacebookConnectAuthPlugIn.h; path = AuthPlugins/RKUFacebookConnectAuthPlugIn.h; sourceTree = "<group>"; };
 		A7ECB49715A741620053744D /* RKUFacebookConnectAuthPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RKUFacebookConnectAuthPlugIn.m; path = AuthPlugins/RKUFacebookConnectAuthPlugIn.m; sourceTree = "<group>"; };
+		C2A7FEE12E2D48CDAE492AE6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1AE825615A4E46000DE7655 /* libRKULock.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRKULock.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1AE825915A4E46000DE7655 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D1AE825D15A4E46000DE7655 /* RKULock-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RKULock-Prefix.pch"; sourceTree = "<group>"; };
 		D1AE825E15A4E46000DE7655 /* RKULock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RKULock.h; sourceTree = "<group>"; };
 		D1AE825F15A4E46000DE7655 /* RKULock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RKULock.m; sourceTree = "<group>"; };
 		D1AE826615A4E46000DE7655 /* RKULockTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RKULockTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D1AE826715A4E46000DE7655 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		D1AE826915A4E46000DE7655 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		D1AE826715A4E46000DE7655 /* SenTestingKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		D1AE826915A4E46000DE7655 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		D1AE827115A4E46000DE7655 /* RKULockTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RKULockTests-Info.plist"; sourceTree = "<group>"; };
 		D1AE827315A4E46000DE7655 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D1AE828115A4E52400DE7655 /* RKUSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RKUSessionManager.h; path = Manager/RKUSessionManager.h; sourceTree = "<group>"; };
@@ -118,10 +122,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A766307115A74B5F000686FC /* CoreGraphics.framework in Frameworks */,
 				D1AE826815A4E46000DE7655 /* SenTestingKit.framework in Frameworks */,
 				D1AE826A15A4E46000DE7655 /* UIKit.framework in Frameworks */,
 				D1AE826B15A4E46000DE7655 /* Foundation.framework in Frameworks */,
-				D1AE826E15A4E46000DE7655 /* libRKULock.a in Frameworks */,
+				22FC315C533E440E9AD78298 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +151,7 @@
 				D1AE825815A4E46000DE7655 /* Frameworks */,
 				D1AE825715A4E46000DE7655 /* Products */,
 				E2494238A20E4DEEBED62585 /* Pods.xcconfig */,
+				2691184C736346E09CC38870 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,10 +167,12 @@
 		D1AE825815A4E46000DE7655 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A766307015A74B5F000686FC /* CoreGraphics.framework */,
 				D1AE825915A4E46000DE7655 /* Foundation.framework */,
 				D1AE826715A4E46000DE7655 /* SenTestingKit.framework */,
 				D1AE826915A4E46000DE7655 /* UIKit.framework */,
 				22662F3D1DDC402DBB7B0099 /* libPods.a */,
+				C2A7FEE12E2D48CDAE492AE6 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -321,6 +329,7 @@
 				D1AE826215A4E46000DE7655 /* Frameworks */,
 				D1AE826315A4E46000DE7655 /* Resources */,
 				D1AE826415A4E46000DE7655 /* ShellScript */,
+				FC135AE327074737AB48438F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -397,6 +406,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		FC135AE327074737AB48438F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -529,6 +552,7 @@
 		};
 		D1AE827E15A4E46000DE7655 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2691184C736346E09CC38870 /* Pods.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -544,6 +568,7 @@
 		};
 		D1AE827F15A4E46000DE7655 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2691184C736346E09CC38870 /* Pods.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
