@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface RKUKeychainStore : NSObject
+#import "RKUAuthStore.h"
+
+@interface RKUKeychainStore : NSObject <RKUAuthStore>
 
 @end

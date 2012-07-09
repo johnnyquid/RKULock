@@ -10,10 +10,12 @@
 
 @protocol RKUSessionManagerDelegate <NSObject>
 
-- (void)sessionManagerDidAuthenticateSuccesfuly;
+- (void)sessionManagerDidAuthenticateSuccesfulyInService:(NSString *)serviceName;
 
-- (void)sessionManagerDidNotAuthenticate;
+- (void)sessionManagerDidNotAuthenticateInService:(NSString *)serviceName;
 
 - (void)sessionManagerInvalidConfiguration:(NSDictionary *)configuration forService:(NSString *)serviceName;
+
+- (void)sessionManagerDidLogoutFromService:(NSString *)serviceName;
 
 @end

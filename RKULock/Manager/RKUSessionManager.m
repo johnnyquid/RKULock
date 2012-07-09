@@ -9,6 +9,8 @@
 #import "RKUSessionManager.h"
 
 #import "RKUAuthPlugIn.h"
+#import "RKUAuthStore.h"
+#import "RKUKeychainStore.h"
 #include "objc/runtime.h"
 
 @interface RKUSessionManager ()
@@ -138,6 +140,7 @@ __strong static id _sharedObject = nil;
   if (![self.configuredPlugins objectForKey:serviceName] && pluginClass && [serviceName length]) {    
     id<RKUAuthPlugIn> plugin = [[pluginClass alloc] init];
     [plugin setDelegate:self];
+    [plugin setAuthStore:[[RKUKeychainStore alloc] init]];
     [self.configuredPlugins setObject:plugin forKey:serviceName];                        
   }
   id<RKUAuthPlugIn> plugin = [self.configuredPlugins objectForKey:serviceName];  

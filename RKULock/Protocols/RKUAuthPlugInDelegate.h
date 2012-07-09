@@ -18,4 +18,6 @@
 
 - (void)authPluginDidNotAuthenticate:(id<RKUAuthPlugIn>)authPlugin;
 
+- (void)authPluginDidLogout:(id<RKUAuthPlugIn>)authPlugin;
+
 @end
