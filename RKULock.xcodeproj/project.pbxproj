@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		22FC315C533E440E9AD78298 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A7FEE12E2D48CDAE492AE6 /* libPods.a */; };
 		6CA3E3F04F894A81BF270D7A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22662F3D1DDC402DBB7B0099 /* libPods.a */; };
+		A76064C815AB8B0F00F0BB3A /* RKUSessionCoordinator.h in Headers */ = {isa = PBXBuildFile; fileRef = A76064C615AB8B0F00F0BB3A /* RKUSessionCoordinator.h */; };
+		A76064C915AB8B0F00F0BB3A /* RKUSessionCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = A76064C715AB8B0F00F0BB3A /* RKUSessionCoordinator.m */; };
+		A76064CA15AB8B0F00F0BB3A /* RKUSessionCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = A76064C715AB8B0F00F0BB3A /* RKUSessionCoordinator.m */; };
+		A76064CC15AB9A2600F0BB3A /* RKUSessionCoordinatorDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A76064CB15AB9A2500F0BB3A /* RKUSessionCoordinatorDelegate.h */; };
+		A76064D015ABA01400F0BB3A /* RKUSessionRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = A76064CE15ABA01400F0BB3A /* RKUSessionRequest.h */; };
+		A76064D115ABA01400F0BB3A /* RKUSessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A76064CF15ABA01400F0BB3A /* RKUSessionRequest.m */; };
+		A76064D215ABA01400F0BB3A /* RKUSessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A76064CF15ABA01400F0BB3A /* RKUSessionRequest.m */; };
 		A766307115A74B5F000686FC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A766307015A74B5F000686FC /* CoreGraphics.framework */; };
 		A766307815A75463000686FC /* RKUAuthStore.h in Headers */ = {isa = PBXBuildFile; fileRef = A766307715A75463000686FC /* RKUAuthStore.h */; };
 		A766307B15A7550D000686FC /* RKUKeychainStore.h in Headers */ = {isa = PBXBuildFile; fileRef = A766307915A7550D000686FC /* RKUKeychainStore.h */; };
@@ -70,6 +77,11 @@
 /* Begin PBXFileReference section */
 		22662F3D1DDC402DBB7B0099 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2691184C736346E09CC38870 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		A76064C615AB8B0F00F0BB3A /* RKUSessionCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RKUSessionCoordinator.h; path = Manager/RKUSessionCoordinator.h; sourceTree = "<group>"; };
+		A76064C715AB8B0F00F0BB3A /* RKUSessionCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RKUSessionCoordinator.m; path = Manager/RKUSessionCoordinator.m; sourceTree = "<group>"; };
+		A76064CB15AB9A2500F0BB3A /* RKUSessionCoordinatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RKUSessionCoordinatorDelegate.h; path = Protocols/RKUSessionCoordinatorDelegate.h; sourceTree = "<group>"; };
+		A76064CE15ABA01400F0BB3A /* RKUSessionRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RKUSessionRequest.h; path = Models/RKUSessionRequest.h; sourceTree = "<group>"; };
+		A76064CF15ABA01400F0BB3A /* RKUSessionRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RKUSessionRequest.m; path = Models/RKUSessionRequest.m; sourceTree = "<group>"; };
 		A766307015A74B5F000686FC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		A766307715A75463000686FC /* RKUAuthStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RKUAuthStore.h; path = Protocols/RKUAuthStore.h; sourceTree = "<group>"; };
 		A766307915A7550D000686FC /* RKUKeychainStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RKUKeychainStore.h; path = Store/RKUKeychainStore.h; sourceTree = "<group>"; };
@@ -144,6 +156,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A76064CD15AB9FDF00F0BB3A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A76064CE15ABA01400F0BB3A /* RKUSessionRequest.h */,
+				A76064CF15ABA01400F0BB3A /* RKUSessionRequest.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		A766307615A75408000686FC /* Store */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +222,7 @@
 		D1AE825B15A4E46000DE7655 /* RKULock */ = {
 			isa = PBXGroup;
 			children = (
+				A76064CD15AB9FDF00F0BB3A /* Models */,
 				D1C1AFE915A7894B009BA0AB /* Configuration */,
 				A766307615A75408000686FC /* Store */,
 				A7ECB49515A741420053744D /* AuthPlugins */,
@@ -245,6 +267,8 @@
 			children = (
 				D1AE828115A4E52400DE7655 /* RKUSessionManager.h */,
 				D1AE828215A4E52400DE7655 /* RKUSessionManager.m */,
+				A76064C615AB8B0F00F0BB3A /* RKUSessionCoordinator.h */,
+				A76064C715AB8B0F00F0BB3A /* RKUSessionCoordinator.m */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -276,6 +300,7 @@
 				A7ECB49015A740B10053744D /* RKUAuthPlugInDelegate.h */,
 				A7ECB49315A740DD0053744D /* RKUSessionManagerDelegate.h */,
 				A766307715A75463000686FC /* RKUAuthStore.h */,
+				A76064CB15AB9A2500F0BB3A /* RKUSessionCoordinatorDelegate.h */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -331,6 +356,9 @@
 				A7ECB49815A741620053744D /* RKUFacebookConnectAuthPlugIn.h in Headers */,
 				A766307815A75463000686FC /* RKUAuthStore.h in Headers */,
 				A766307B15A7550D000686FC /* RKUKeychainStore.h in Headers */,
+				A76064C815AB8B0F00F0BB3A /* RKUSessionCoordinator.h in Headers */,
+				A76064CC15AB9A2600F0BB3A /* RKUSessionCoordinatorDelegate.h in Headers */,
+				A76064D015ABA01400F0BB3A /* RKUSessionRequest.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +501,8 @@
 				D1AE82B415A4E7D800DE7655 /* RKUTestAuthPlugIn.m in Sources */,
 				A7ECB49915A741620053744D /* RKUFacebookConnectAuthPlugIn.m in Sources */,
 				A766307C15A7550D000686FC /* RKUKeychainStore.m in Sources */,
+				A76064C915AB8B0F00F0BB3A /* RKUSessionCoordinator.m in Sources */,
+				A76064D115ABA01400F0BB3A /* RKUSessionRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +523,8 @@
 				D1AE82C215A4F8A900DE7655 /* RKUFailTestAuthPlugIn.m in Sources */,
 				A7ECB49A15A741620053744D /* RKUFacebookConnectAuthPlugIn.m in Sources */,
 				A766307D15A7550D000686FC /* RKUKeychainStore.m in Sources */,
+				A76064CA15AB8B0F00F0BB3A /* RKUSessionCoordinator.m in Sources */,
+				A76064D215ABA01400F0BB3A /* RKUSessionRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

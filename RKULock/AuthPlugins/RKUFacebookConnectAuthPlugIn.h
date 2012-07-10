@@ -20,4 +20,6 @@
 
 @property (nonatomic, strong) id<RKUAuthStore> authStore;
 
+@property (nonatomic, strong) NSError *configurationError;
+
 @end

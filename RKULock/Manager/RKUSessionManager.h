@@ -8,18 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-#import "RKUAuthPluginDelegate.h"
+#import "RKUSessionCoordinatorDelegate.h"
 
 #import "RKUSessionManagerDelegate.h"
 
-@interface RKUSessionManager : NSObject <RKUAuthPlugInDelegate>
+@interface RKUSessionManager : NSObject <RKUSessionCoordinatorDelegate>
 
-@property (nonatomic, strong, readonly) NSArray *pluginClasses;
 @property (nonatomic, weak) id<RKUSessionManagerDelegate> delegate;
 
-+ (id)sharedInstance;
-
-- (NSArray *)findAuthPluginClassesByConventionAndProtocol;
+- (id)initWithDelegate:(id<RKUSessionManagerDelegate>)delegate;
 
 - (void)configureService:(NSString *)serviceName using:(NSDictionary *)configuration;
 

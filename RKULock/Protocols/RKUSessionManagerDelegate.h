@@ -8,14 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@class RKUSessionManager;
+
 @protocol RKUSessionManagerDelegate <NSObject>
 
-- (void)sessionManagerDidAuthenticateSuccesfulyInService:(NSString *)serviceName;
+- (void)sessionManager:(RKUSessionManager *)sessionManager didAuthenticate:(BOOL)didAuthenticate;
 
-- (void)sessionManagerDidNotAuthenticateInService:(NSString *)serviceName;
+- (void)sessionManager:(RKUSessionManager *)sessionManager didLogout:(BOOL)didLogout;
 
-- (void)sessionManagerInvalidConfiguration:(NSDictionary *)configuration forService:(NSString *)serviceName;
-
-- (void)sessionManagerDidLogoutFromService:(NSString *)serviceName;
+- (void)sessionManager:(RKUSessionManager *)sessionManager didFailWithError:(NSError *)error;
 
 @end

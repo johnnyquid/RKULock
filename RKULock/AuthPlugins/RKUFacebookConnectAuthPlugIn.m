@@ -25,6 +25,7 @@
 @synthesize delegate = _delegate;
 @synthesize permissions = _permissions;
 @synthesize authStore = _authStore;
+@synthesize configurationError = _configurationError;
 
 + (NSString*)serviceName
 {
@@ -32,8 +33,9 @@
 }
 
 #pragma mark - configuration methods
-- (void)configureUsing:(NSDictionary *)configuration
+- (BOOL)configureUsing:(NSDictionary *)configuration
 {
+  BOOL valid = NO;
   NSString *appId = [configuration objectForKey:@"AppId"];
   if ([configuration objectForKey:@"permissions"]) {
     self.permissions = [configuration objectForKey:@"permissions"];
@@ -41,13 +43,13 @@
     self.permissions = [NSArray array];
   }
   if (![appId length]) {
-    if ([self.delegate respondsToSelector:@selector(authPlugin:invalidConfiguration:)]) {
-      [self.delegate authPlugin:self invalidConfiguration:configuration];
-    }
+    self.configurationError = [NSError errorWithDomain:@"" code:100 userInfo:nil];    
   } else {
+    valid = YES;
     self.facebook = [[Facebook alloc] initWithAppId:appId andDelegate:self];
     self.facebook = [self authenticatedFacebookObject];
   }
+  return valid;
 }
 
 #pragma mark - authentication methods

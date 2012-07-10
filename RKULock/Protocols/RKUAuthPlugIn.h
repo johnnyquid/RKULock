@@ -15,9 +15,12 @@
 @required
 
 #pragma mark - plugin configuration
+
 + (NSString *)serviceName;
 
-- (void)configureUsing:(NSDictionary *)configuration;
+- (NSError *)configurationError;
+
+- (BOOL)configureUsing:(NSDictionary *)configuration;
 
 - (void)setDelegate:(id)delegate;
 

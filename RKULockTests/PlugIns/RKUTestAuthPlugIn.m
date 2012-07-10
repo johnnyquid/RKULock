@@ -17,9 +17,9 @@
 
 
 
-- (void)configureUsing:(NSDictionary *)configuration
+- (BOOL)configureUsing:(NSDictionary *)configuration
 {
-  
+    
 }
 
 - (void)authenticate
