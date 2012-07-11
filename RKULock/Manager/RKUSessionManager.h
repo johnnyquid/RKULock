@@ -16,6 +16,8 @@
 
 @property (nonatomic, weak) id<RKUSessionManagerDelegate> delegate;
 
+@property (nonatomic, strong, readonly) NSError *lastError;
+
 - (id)initWithDelegate:(id<RKUSessionManagerDelegate>)delegate;
 
 - (void)configureService:(NSString *)serviceName using:(NSDictionary *)configuration;

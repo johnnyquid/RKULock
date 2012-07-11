@@ -283,7 +283,7 @@ __strong static id _sharedObject = nil;
 {
   processingRequest = NO;
   if ([self.currentDelegate respondsToSelector:@selector(sessionCoordinator:invalidConfiguration:)]) {
-    [self.currentDelegate sessionCoordinator:self invalidConfiguration:configuration];
+    [self.currentDelegate sessionCoordinator:self configurationDidFailWithError:nil];
     
   }
   [self processRequestsQueue];

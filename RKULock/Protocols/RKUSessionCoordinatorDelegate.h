@@ -14,8 +14,6 @@
 
 @required
 
-- (void)sessionCoordinator:(RKUSessionCoordinator *)sessionCoordinator invalidConfiguration:(NSDictionary *)configuration;
-
 - (void)sessionCoordinatorDidAuthenticateSuccesfully:(RKUSessionCoordinator *)sessionCoordinator;
 
 - (void)sessionCoordinatorDidNotAuthenticate:(RKUSessionCoordinator *)sessionCoordinator;
