@@ -11,6 +11,7 @@
 #import "RKUAuthPlugIn.h"
 #import "RKUAuthStore.h"
 #import "RKUKeychainStore.h"
+#import "RKUFacebookConnectAuthPlugIn.h"
 #include "objc/runtime.h"
 
 @interface RKUSessionCoordinator ()
@@ -188,10 +189,10 @@ __strong static id _sharedObject = nil;
 {
   if ([self.configuredPlugins objectForKey:serviceName]) {
     
-    id<RKUAuthPlugIn> authPlugin = [self.configuredPlugins objectForKey:serviceName];
-    
-    
-    NSMethodSignature *authenticateSignature = [NSMutableArray
+    //id<RKUAuthPlugIn> authPlugin = [self.configuredPlugins objectForKey:serviceName];
+    RKUFacebookConnectAuthPlugIn *authPlugin = [self.configuredPlugins objectForKey:serviceName];
+
+    NSMethodSignature *authenticateSignature = [RKUFacebookConnectAuthPlugIn
                                                 instanceMethodSignatureForSelector:@selector(authenticate)];
     NSInvocation * authenticateInvocation = [NSInvocation
                                              invocationWithMethodSignature:authenticateSignature];
@@ -223,14 +224,13 @@ __strong static id _sharedObject = nil;
     
     id<RKUAuthPlugIn> authPlugin = [self.configuredPlugins objectForKey:serviceName];
     
-    
-    NSMethodSignature *authenticateSignature = [NSMutableArray
+    NSMethodSignature *logoutSignature = [[(NSObject *)authPlugin class]
                                                 instanceMethodSignatureForSelector:@selector(logout)];
-    NSInvocation * authenticateInvocation = [NSInvocation
-                                             invocationWithMethodSignature:authenticateSignature];
-    [authenticateInvocation setTarget:authPlugin];
-    [authenticateInvocation setSelector:@selector(logout)];    
-    [self.requestsQueue addObject:[self dictionaryWithInvocation:authenticateInvocation 
+    NSInvocation *logoutInvocation = [NSInvocation
+                                             invocationWithMethodSignature:logoutSignature];
+    [logoutInvocation setTarget:authPlugin];
+    [logoutInvocation setSelector:@selector(logout)];    
+    [self.requestsQueue addObject:[self dictionaryWithInvocation:logoutInvocation 
                                                      andDelegate:delegate 
                                                        andPlugin:authPlugin]];
     [self processRequestsQueue];
@@ -253,11 +253,13 @@ __strong static id _sharedObject = nil;
 - (void)processRequestsQueue
 {
   if (!processingRequest) {
+    processingRequest = YES;
     NSDictionary *request = [self.requestsQueue objectAtIndex:0];
     self.currentAuthPlugin = [request objectForKey:@"plugin"];
     self.currentDelegate = [request objectForKey:@"delegate"];
     NSInvocation *invocation = [request objectForKey:@"invocation"];
     [invocation invoke];
+    
   } 
 }
 

@@ -1,0 +1,315 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A7722B6615ADFF220078826A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7722B6515ADFF220078826A /* UIKit.framework */; };
+		A7722B6815ADFF220078826A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7722B6715ADFF220078826A /* Foundation.framework */; };
+		A7722B6A15ADFF220078826A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7722B6915ADFF220078826A /* CoreGraphics.framework */; };
+		A7722B7015ADFF220078826A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7722B6E15ADFF220078826A /* InfoPlist.strings */; };
+		A7722B7215ADFF220078826A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7722B7115ADFF220078826A /* main.m */; };
+		A7722B7615ADFF220078826A /* RKUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7722B7515ADFF220078826A /* RKUAppDelegate.m */; };
+		A7722B7915ADFF220078826A /* RKUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7722B7815ADFF220078826A /* RKUViewController.m */; };
+		A7722B7C15ADFF220078826A /* RKUViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7722B7A15ADFF220078826A /* RKUViewController.xib */; };
+		A79285F315AE0F74005F6435 /* libRKULock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A79285F215AE0F74005F6435 /* libRKULock.a */; };
+		A79285F515AE17E6005F6435 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A79285F415AE17E6005F6435 /* Security.framework */; };
+		A79285F715AE1A23005F6435 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A79285F615AE1A23005F6435 /* libPods.a */; };
+		A79285FA15AE1CD8005F6435 /* AppConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = A79285F915AE1CD8005F6435 /* AppConfiguration.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A7722B6115ADFF220078826A /* RKULockSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RKULockSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7722B6515ADFF220078826A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A7722B6715ADFF220078826A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A7722B6915ADFF220078826A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A7722B6D15ADFF220078826A /* RKULockSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RKULockSample-Info.plist"; sourceTree = "<group>"; };
+		A7722B6F15ADFF220078826A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A7722B7115ADFF220078826A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A7722B7315ADFF220078826A /* RKULockSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RKULockSample-Prefix.pch"; sourceTree = "<group>"; };
+		A7722B7415ADFF220078826A /* RKUAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RKUAppDelegate.h; sourceTree = "<group>"; };
+		A7722B7515ADFF220078826A /* RKUAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RKUAppDelegate.m; sourceTree = "<group>"; };
+		A7722B7715ADFF220078826A /* RKUViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RKUViewController.h; sourceTree = "<group>"; };
+		A7722B7815ADFF220078826A /* RKUViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RKUViewController.m; sourceTree = "<group>"; };
+		A7722B7B15ADFF220078826A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RKUViewController.xib; sourceTree = "<group>"; };
+		A79285F215AE0F74005F6435 /* libRKULock.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libRKULock.a; path = "../build/Release-iphoneos/libRKULock.a"; sourceTree = "<group>"; };
+		A79285F415AE17E6005F6435 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A79285F615AE1A23005F6435 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libPods.a; path = "../Pods/build/Release-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		A79285F915AE1CD8005F6435 /* AppConfiguration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppConfiguration.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A7722B5E15ADFF220078826A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A79285F715AE1A23005F6435 /* libPods.a in Frameworks */,
+				A79285F515AE17E6005F6435 /* Security.framework in Frameworks */,
+				A79285F315AE0F74005F6435 /* libRKULock.a in Frameworks */,
+				A7722B6615ADFF220078826A /* UIKit.framework in Frameworks */,
+				A7722B6815ADFF220078826A /* Foundation.framework in Frameworks */,
+				A7722B6A15ADFF220078826A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A7722B5615ADFF220078826A = {
+			isa = PBXGroup;
+			children = (
+				A79285F615AE1A23005F6435 /* libPods.a */,
+				A7722B6B15ADFF220078826A /* RKULockSample */,
+				A7722B6415ADFF220078826A /* Frameworks */,
+				A7722B6215ADFF220078826A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A7722B6215ADFF220078826A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A7722B6115ADFF220078826A /* RKULockSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A7722B6415ADFF220078826A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A79285F415AE17E6005F6435 /* Security.framework */,
+				A79285F215AE0F74005F6435 /* libRKULock.a */,
+				A7722B6515ADFF220078826A /* UIKit.framework */,
+				A7722B6715ADFF220078826A /* Foundation.framework */,
+				A7722B6915ADFF220078826A /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A7722B6B15ADFF220078826A /* RKULockSample */ = {
+			isa = PBXGroup;
+			children = (
+				A79285F815AE1CD8005F6435 /* Configuration */,
+				A7722B7415ADFF220078826A /* RKUAppDelegate.h */,
+				A7722B7515ADFF220078826A /* RKUAppDelegate.m */,
+				A7722B7715ADFF220078826A /* RKUViewController.h */,
+				A7722B7815ADFF220078826A /* RKUViewController.m */,
+				A7722B7A15ADFF220078826A /* RKUViewController.xib */,
+				A7722B6C15ADFF220078826A /* Supporting Files */,
+			);
+			path = RKULockSample;
+			sourceTree = "<group>";
+		};
+		A7722B6C15ADFF220078826A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A7722B6D15ADFF220078826A /* RKULockSample-Info.plist */,
+				A7722B6E15ADFF220078826A /* InfoPlist.strings */,
+				A7722B7115ADFF220078826A /* main.m */,
+				A7722B7315ADFF220078826A /* RKULockSample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A79285F815AE1CD8005F6435 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				A79285F915AE1CD8005F6435 /* AppConfiguration.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A7722B6015ADFF220078826A /* RKULockSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7722B7F15ADFF220078826A /* Build configuration list for PBXNativeTarget "RKULockSample" */;
+			buildPhases = (
+				A7722B5D15ADFF220078826A /* Sources */,
+				A7722B5E15ADFF220078826A /* Frameworks */,
+				A7722B5F15ADFF220078826A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RKULockSample;
+			productName = RKULockSample;
+			productReference = A7722B6115ADFF220078826A /* RKULockSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A7722B5815ADFF220078826A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = RKU;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = A7722B5B15ADFF220078826A /* Build configuration list for PBXProject "RKULockSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A7722B5615ADFF220078826A;
+			productRefGroup = A7722B6215ADFF220078826A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A7722B6015ADFF220078826A /* RKULockSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A7722B5F15ADFF220078826A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7722B7015ADFF220078826A /* InfoPlist.strings in Resources */,
+				A7722B7C15ADFF220078826A /* RKUViewController.xib in Resources */,
+				A79285FA15AE1CD8005F6435 /* AppConfiguration.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A7722B5D15ADFF220078826A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7722B7215ADFF220078826A /* main.m in Sources */,
+				A7722B7615ADFF220078826A /* RKUAppDelegate.m in Sources */,
+				A7722B7915ADFF220078826A /* RKUViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A7722B6E15ADFF220078826A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7722B6F15ADFF220078826A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A7722B7A15ADFF220078826A /* RKUViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7722B7B15ADFF220078826A /* en */,
+			);
+			name = RKUViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A7722B7D15ADFF220078826A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A7722B7E15ADFF220078826A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A7722B8015ADFF220078826A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RKULockSample/RKULockSample-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../RKULock/**",
+					"$(SRCROOT)/../Pods/**",
+				);
+				INFOPLIST_FILE = "RKULockSample/RKULockSample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A7722B8115ADFF220078826A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RKULockSample/RKULockSample-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../RKULock/**",
+					"$(SRCROOT)/../Pods/**",
+				);
+				INFOPLIST_FILE = "RKULockSample/RKULockSample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A7722B5B15ADFF220078826A /* Build configuration list for PBXProject "RKULockSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7722B7D15ADFF220078826A /* Debug */,
+				A7722B7E15ADFF220078826A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7722B7F15ADFF220078826A /* Build configuration list for PBXNativeTarget "RKULockSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7722B8015ADFF220078826A /* Debug */,
+				A7722B8115ADFF220078826A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A7722B5815ADFF220078826A /* Project object */;
+}
