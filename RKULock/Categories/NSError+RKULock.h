@@ -11,7 +11,9 @@
 @interface NSError (RKULock)
 
 + (NSError *)configurationError;
++ (NSError *)configurationErrorWithMessage:(NSString *)message;
 + (NSError *)notFoundError;
 + (NSError *)plugInNotConfiguredError;
++ (NSError *)sessionManagerGenericError;
 
 @end

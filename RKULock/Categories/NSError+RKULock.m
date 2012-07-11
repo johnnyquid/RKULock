@@ -20,6 +20,15 @@
 }
 
 
++ (NSError *)configurationErrorWithMessage:(NSString *)message
+{
+  NSMutableDictionary *descriptionDictionary;
+  [descriptionDictionary setObject:message forKey:@"NSLocalizedDescriptionKey"];
+  
+  return [NSError errorWithDomain:@"RKULock" code:1 userInfo:descriptionDictionary];
+}
+
+
 + (NSError *)notFoundError
 {
     NSMutableDictionary *descriptionDictionary;
@@ -38,5 +47,16 @@
     
     return [NSError errorWithDomain:@"RKULock" code:3 userInfo:descriptionDictionary];
 }
+
+
++ (NSError *)sessionManagerGenericError
+{
+  NSMutableDictionary *descriptionDictionary;
+  NSString * errorDescription = NSLocalizedStringFromTable(@"INKGenericError", @"LocalizedStrings", nil);
+  [descriptionDictionary setObject:errorDescription forKey:@"NSLocalizedDescriptionKey"];
+
+  return [NSError errorWithDomain:@"RKULock" code:3 userInfo:descriptionDictionary];
+}
+
 
 @end

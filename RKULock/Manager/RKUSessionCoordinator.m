@@ -12,6 +12,7 @@
 #import "RKUAuthStore.h"
 #import "RKUKeychainStore.h"
 #import "RKUFacebookConnectAuthPlugIn.h"
+#import "NSError+RKULock.h"
 #include "objc/runtime.h"
 
 @interface RKUSessionCoordinator ()
@@ -58,8 +59,11 @@ __strong static id _sharedObject = nil;
 	if (self)
 	{
     processingRequest = NO;
+    self.requestsQueue = [[NSMutableArray alloc] init];
+    NSLog(@"requests Queue %@", self.requestsQueue);
 		self.pluginClasses = [self findAuthPluginClassesByConventionAndProtocol];
     self.configuredPlugins = [NSMutableDictionary dictionary];
+    
 	}
   
 	return self;
@@ -160,7 +164,8 @@ __strong static id _sharedObject = nil;
   }
   else if (![self.configuredPlugins objectForKey:serviceName] && [serviceName length]) {    
     id<RKUAuthPlugIn> plugin = [[pluginClass alloc] init];
-    [plugin setAuthStore:[[RKUKeychainStore alloc] init]];
+    [plugin setAuthStore:[[RKUKeychainStore alloc] init]];    
+    [plugin setDelegate:self];
     [self.configuredPlugins setObject:plugin forKey:serviceName];                        
   }
   id<RKUAuthPlugIn> plugin = [self.configuredPlugins objectForKey:serviceName];  
@@ -189,11 +194,10 @@ __strong static id _sharedObject = nil;
 {
   if ([self.configuredPlugins objectForKey:serviceName]) {
     
-    //id<RKUAuthPlugIn> authPlugin = [self.configuredPlugins objectForKey:serviceName];
-    RKUFacebookConnectAuthPlugIn *authPlugin = [self.configuredPlugins objectForKey:serviceName];
-
-    NSMethodSignature *authenticateSignature = [RKUFacebookConnectAuthPlugIn
-                                                instanceMethodSignatureForSelector:@selector(authenticate)];
+    id<RKUAuthPlugIn> authPlugin = [self.configuredPlugins objectForKey:serviceName];
+    
+    [authPlugin setDelegate:self];
+    NSMethodSignature *authenticateSignature = [(NSObject *)authPlugin methodSignatureForSelector:@selector(authenticate)];
     NSInvocation * authenticateInvocation = [NSInvocation
                                              invocationWithMethodSignature:authenticateSignature];
     [authenticateInvocation setTarget:authPlugin];
@@ -224,8 +228,7 @@ __strong static id _sharedObject = nil;
     
     id<RKUAuthPlugIn> authPlugin = [self.configuredPlugins objectForKey:serviceName];
     
-    NSMethodSignature *logoutSignature = [[(NSObject *)authPlugin class]
-                                                instanceMethodSignatureForSelector:@selector(logout)];
+    NSMethodSignature *logoutSignature = [(NSObject *)authPlugin methodSignatureForSelector:@selector(logout)];
     NSInvocation *logoutInvocation = [NSInvocation
                                              invocationWithMethodSignature:logoutSignature];
     [logoutInvocation setTarget:authPlugin];
@@ -244,6 +247,7 @@ __strong static id _sharedObject = nil;
 - (BOOL)handleOpenURLForAuthentication:(NSURL *)url                             
                           withDelegate:(id<RKUSessionCoordinatorDelegate>)delegate
 {
+  [self.currentAuthPlugin setDelegate:self];
   if ([self.currentAuthPlugin respondsToSelector:@selector(authenticateWithUrl:)]) {
     return [self.currentAuthPlugin authenticateWithUrl:url];
   }
@@ -252,9 +256,17 @@ __strong static id _sharedObject = nil;
 
 - (void)processRequestsQueue
 {
-  if (!processingRequest) {
+  if (!processingRequest && [self.requestsQueue count]) {
     processingRequest = YES;
+    NSLog(@"requestqueue %d", [self.requestsQueue count]);
     NSDictionary *request = [self.requestsQueue objectAtIndex:0];
+    NSMutableArray *tempArray = [NSMutableArray array];
+    for (int i = 1; i < [self.requestsQueue count]; i++) {
+      [tempArray addObject:[self.requestsQueue objectAtIndex:i]];
+    }
+    self.requestsQueue = tempArray;
+    NSLog(@"requestqueue %d", [self.requestsQueue count]);
+    
     self.currentAuthPlugin = [request objectForKey:@"plugin"];
     self.currentDelegate = [request objectForKey:@"delegate"];
     NSInvocation *invocation = [request objectForKey:@"invocation"];
@@ -326,21 +338,22 @@ __strong static id _sharedObject = nil;
 - (void)respondConfigurationWithError:(NSError *)error toDelegate:(id<RKUSessionCoordinatorDelegate>)delegate
 {
   if ([delegate respondsToSelector:@selector(sessionCoordinator:configurationDidFailWithError:)]) {
-    [delegate sessionCoordinator:self configurationDidFailWithError:error];
+    
+    [delegate sessionCoordinator:self configurationDidFailWithError:[NSError configurationErrorWithMessage:@"AppId is required"]];
   }
 }
 
 - (void)respondPluginNotFoundWithError:(NSError *)error toDelegate:(id<RKUSessionCoordinatorDelegate>)delegate
 {
   if ([delegate respondsToSelector:@selector(sessionCoordinator:pluginNotFoundWithError:)]) {
-    [delegate sessionCoordinator:self pluginNotFoundWithError:error];
+    [delegate sessionCoordinator:self pluginNotFoundWithError:[NSError notFoundError]];
   }  
 }
 
 - (void)respondPluginNotConfiguredWithError:(NSError *)error toDelegate:(id<RKUSessionCoordinatorDelegate>)delegate
 {
   if ([delegate respondsToSelector:@selector(sessionCoordinator:pluginNotConfiguredWithError:)]) {
-    [delegate sessionCoordinator:self pluginNotConfiguredWithError:error];
+    [delegate sessionCoordinator:self pluginNotConfiguredWithError:[NSError plugInNotConfiguredError]];
   }  
 }
 

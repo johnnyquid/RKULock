@@ -5,4 +5,7 @@
   Created by Luis Alberto Hernández Guzmán on 7/11/12.
   Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 */
-"INKConfigurationError" = "There was an error configurating the plug-in"
+"INKConfigurationError" = "There was an error configurating the plug-in";
+"INKGenericError" = "Sorry, something went wrong";
+"INKNotFoundError" = "Plugi-In not found";
+"INKNotConfiguredPlugInError" = "The plug-in is not configured";

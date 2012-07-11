@@ -100,6 +100,9 @@
 - (void)fbDidLogout
 {
   [self removeAuthDataFromStore];
+  if ([self.delegate respondsToSelector:@selector(authPluginDidLogout:)]) {
+    [self.delegate authPluginDidLogout:self];
+  }
 }
 
 - (void)fbSessionInvalidated
@@ -134,5 +137,12 @@
   [self.authStore removeTokenExpirationDateWithServiceName:[self.class serviceName]];
 }
 
+
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
+{
+  NSMethodSignature *methodSignature = [super methodSignatureForSelector:aSelector];
+  
+  return methodSignature;
+}
 
 @end

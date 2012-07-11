@@ -8,6 +8,7 @@
 
 #import "RKUSessionManager.h"
 
+#import "NSError+RKULock.h"
 #import "RKUSessionCoordinator.h"
 
 @interface RKUSessionManager ()
@@ -112,7 +113,7 @@
   self.lastError = error;
   
   if ([self.delegate respondsToSelector:@selector(sessionManager:didFailWithError:)]) {
-    [self.delegate sessionManager:self didFailWithError:nil];
+    [self.delegate sessionManager:self didFailWithError:[NSError sessionManagerGenericError]];
   }
 
 }
@@ -122,7 +123,7 @@
   
   self.lastError = error;
   if ([self.delegate respondsToSelector:@selector(sessionManager:didFailWithError:)]) {
-    [self.delegate sessionManager:self didFailWithError:nil];
+    [self.delegate sessionManager:self didFailWithError:[NSError sessionManagerGenericError]];
   }
 }
 
@@ -130,7 +131,7 @@
 {
   self.lastError = error;
   if ([self.delegate respondsToSelector:@selector(sessionManager:didFailWithError:)]) {
-    [self.delegate sessionManager:self didFailWithError:nil];
+    [self.delegate sessionManager:self didFailWithError:[NSError sessionManagerGenericError]];
   }
 }
 

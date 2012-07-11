@@ -35,9 +35,9 @@
 		A7722B7715ADFF220078826A /* RKUViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RKUViewController.h; sourceTree = "<group>"; };
 		A7722B7815ADFF220078826A /* RKUViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RKUViewController.m; sourceTree = "<group>"; };
 		A7722B7B15ADFF220078826A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RKUViewController.xib; sourceTree = "<group>"; };
-		A79285F215AE0F74005F6435 /* libRKULock.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libRKULock.a; path = "../build/Release-iphoneos/libRKULock.a"; sourceTree = "<group>"; };
+		A79285F215AE0F74005F6435 /* libRKULock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libRKULock.a; path = "../build/Release-iphoneos/libRKULock.a"; sourceTree = "<group>"; };
 		A79285F415AE17E6005F6435 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		A79285F615AE1A23005F6435 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libPods.a; path = "../Pods/build/Release-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		A79285F615AE1A23005F6435 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "../Pods/build/Release-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		A79285F915AE1CD8005F6435 /* AppConfiguration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppConfiguration.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -266,6 +266,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../RKULock/**",
 					"$(SRCROOT)/../Pods/**",
+					"$(SRCROOT)/../RKULock/RKULock/Categories/",
 				);
 				INFOPLIST_FILE = "RKULockSample/RKULockSample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -281,6 +282,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../RKULock/**",
 					"$(SRCROOT)/../Pods/**",
+					"$(SRCROOT)/../RKULock/RKULock/Categories/",
 				);
 				INFOPLIST_FILE = "RKULockSample/RKULockSample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -16,7 +16,7 @@
 
 @interface RKUFacebookConnectAuthPlugIn : NSObject <RKUAuthPlugIn, FBSessionDelegate>
 
-@property (nonatomic, weak) id<RKUAuthPlugInDelegate> delegate;
+@property (nonatomic, strong) id<RKUAuthPlugInDelegate> delegate;
 
 @property (nonatomic, strong) id<RKUAuthStore> authStore;
 

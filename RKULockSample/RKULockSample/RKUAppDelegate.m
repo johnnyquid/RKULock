@@ -9,7 +9,7 @@
 #import "RKUAppDelegate.h"
 
 #import "RKUViewController.h"
-
+#import "NSError+RKULock.h"
 #import "RKUFacebookConnectAuthPlugIn.h"
 #import "RKUSessionManager.h"
 
