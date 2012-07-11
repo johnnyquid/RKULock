@@ -62,6 +62,8 @@
 		D1AE82B915A4E84100DE7655 /* RKUSessionManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE82B815A4E84100DE7655 /* RKUSessionManagerTest.m */; };
 		D1AE82BF15A4F88C00DE7655 /* RKUAuthPlugInFail.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE82BE15A4F88C00DE7655 /* RKUAuthPlugInFail.m */; };
 		D1AE82C215A4F8A900DE7655 /* RKUFailTestAuthPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE82C115A4F8A900DE7655 /* RKUFailTestAuthPlugIn.m */; };
+		D1C1CF4815ADFD6100BAB117 /* NSError+RKULock.h in Headers */ = {isa = PBXBuildFile; fileRef = D1C1CF4615ADFD6100BAB117 /* NSError+RKULock.h */; };
+		D1C1CF4915ADFD6100BAB117 /* NSError+RKULock.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C1CF4715ADFD6100BAB117 /* NSError+RKULock.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +129,10 @@
 		D1AE82C015A4F8A900DE7655 /* RKUFailTestAuthPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RKUFailTestAuthPlugIn.h; path = PlugIns/RKUFailTestAuthPlugIn.h; sourceTree = "<group>"; };
 		D1AE82C115A4F8A900DE7655 /* RKUFailTestAuthPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RKUFailTestAuthPlugIn.m; path = PlugIns/RKUFailTestAuthPlugIn.m; sourceTree = "<group>"; };
 		D1C1AFEB15A78974009BA0AB /* AppConfiguration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppConfiguration.plist; path = Configuration/AppConfiguration.plist; sourceTree = "<group>"; };
+		D1C1CF4615ADFD6100BAB117 /* NSError+RKULock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+RKULock.h"; path = "Categories/NSError+RKULock.h"; sourceTree = "<group>"; };
+		D1C1CF4715ADFD6100BAB117 /* NSError+RKULock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+RKULock.m"; path = "Categories/NSError+RKULock.m"; sourceTree = "<group>"; };
+		D1C1CF4B15AE287300BAB117 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizedStrings.strings; sourceTree = "<group>"; };
+		D1C1CF4D15AE287F00BAB117 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LocalizedStrings.strings; sourceTree = "<group>"; };
 		E2494238A20E4DEEBED62585 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -222,6 +228,7 @@
 		D1AE825B15A4E46000DE7655 /* RKULock */ = {
 			isa = PBXGroup;
 			children = (
+				D1C1CF4415ADFD2F00BAB117 /* Categories */,
 				A76064CD15AB9FDF00F0BB3A /* Models */,
 				D1C1AFE915A7894B009BA0AB /* Configuration */,
 				A766307615A75408000686FC /* Store */,
@@ -331,8 +338,18 @@
 			isa = PBXGroup;
 			children = (
 				D1C1AFEB15A78974009BA0AB /* AppConfiguration.plist */,
+				D1C1CF4C15AE287300BAB117 /* LocalizedStrings.strings */,
 			);
 			name = Configuration;
+			sourceTree = "<group>";
+		};
+		D1C1CF4415ADFD2F00BAB117 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				D1C1CF4615ADFD6100BAB117 /* NSError+RKULock.h */,
+				D1C1CF4715ADFD6100BAB117 /* NSError+RKULock.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,6 +376,7 @@
 				A76064C815AB8B0F00F0BB3A /* RKUSessionCoordinator.h in Headers */,
 				A76064CC15AB9A2600F0BB3A /* RKUSessionCoordinatorDelegate.h in Headers */,
 				A76064D015ABA01400F0BB3A /* RKUSessionRequest.h in Headers */,
+				D1C1CF4815ADFD6100BAB117 /* NSError+RKULock.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +435,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				es,
 			);
 			mainGroup = D1AE824B15A4E46000DE7655;
 			productRefGroup = D1AE825715A4E46000DE7655 /* Products */;
@@ -503,6 +522,7 @@
 				A766307C15A7550D000686FC /* RKUKeychainStore.m in Sources */,
 				A76064C915AB8B0F00F0BB3A /* RKUSessionCoordinator.m in Sources */,
 				A76064D115ABA01400F0BB3A /* RKUSessionRequest.m in Sources */,
+				D1C1CF4915ADFD6100BAB117 /* NSError+RKULock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,6 +565,16 @@
 				D1AE827315A4E46000DE7655 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D1C1CF4C15AE287300BAB117 /* LocalizedStrings.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1C1CF4B15AE287300BAB117 /* en */,
+				D1C1CF4D15AE287F00BAB117 /* es */,
+			);
+			name = LocalizedStrings.strings;
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
