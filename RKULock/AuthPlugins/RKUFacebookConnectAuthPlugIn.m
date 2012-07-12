@@ -8,6 +8,8 @@
 
 #import "RKUFacebookConnectAuthPlugIn.h"
 
+#import "NSError+RKULock.h"
+
 @interface RKUFacebookConnectAuthPlugIn ()
 
 @property (nonatomic, strong) Facebook *facebook;
@@ -25,7 +27,7 @@
 @synthesize delegate = _delegate;
 @synthesize permissions = _permissions;
 @synthesize authStore = _authStore;
-@synthesize configurationError = _configurationError;
+
 
 + (NSString*)serviceName
 {
@@ -42,9 +44,7 @@
   } else {
     self.permissions = [NSArray array];
   }
-  if (![appId length]) {
-    self.configurationError = [NSError errorWithDomain:@"" code:100 userInfo:nil];    
-  } else {
+  if ([appId length]) {
     valid = YES;
     self.facebook = [[Facebook alloc] initWithAppId:appId andDelegate:self];
     self.facebook = [self authenticatedFacebookObject];
@@ -145,4 +145,10 @@
   return methodSignature;
 }
 
+#pragma mark - configuration error
+
+- (NSError *)configurationError
+{
+  return [NSError configurationErrorWithMessage:@"You must provide the value of the AppId"];
+}
 @end

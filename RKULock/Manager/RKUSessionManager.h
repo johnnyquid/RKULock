@@ -20,7 +20,7 @@
 
 - (id)initWithDelegate:(id<RKUSessionManagerDelegate>)delegate;
 
-- (void)configureService:(NSString *)serviceName using:(NSDictionary *)configuration;
+- (BOOL)configureService:(NSString *)serviceName using:(NSDictionary *)configuration;
 
 - (BOOL)handleOpenURLForAuthentication:(NSURL *)url;
 

@@ -31,13 +31,16 @@
   [super viewDidLoad];
 
 	[self.sessionManager setDelegate:self];
-  [self.sessionManager configureService:@"facebook" 
-                                  using:[NSDictionary dictionaryWithObject:@"120624561408332" forKey:@"AppId"]];
-  if ([self.sessionManager isAuthenticatedInService:@"facebook"]) {
-    [self disableLogin];
-  }
-  else {
-    [self enableLogin];
+  
+  if ( [self.sessionManager configureService:@"facebook" 
+                                       using:[NSDictionary dictionaryWithObject:@"120624561408332" 
+                                                                         forKey:@"AppId"]] ) {
+    if ([self.sessionManager isAuthenticatedInService:@"facebook"]) {
+      [self disableLogin];
+    }
+    else {
+      [self enableLogin];
+    }
   }
 }
 
@@ -55,7 +58,9 @@
 
 - (IBAction)loginWithFacebook:(id)sender
 {
-  [self.sessionManager authenticateWithServiceName:@"faceboogk"];
+  
+  [self.sessionManager authenticateWithServiceName:@"facebook"];
+  
 }
 
 - (IBAction)logoutFromFacebook:(id)sender
@@ -92,7 +97,7 @@
 - (void)sessionManager:(RKUSessionManager *)sessionManager didFailWithError:(NSError *)error
 {
   NSLog(@"%@", self.sessionManager.lastError);
-  [self showAlertWithTitle:@"Error" andMessage:error.localizedDescription];
+  [self showAlertWithTitle:@"Error" andMessage:[error localizedDescription]];
 }
 
 #pragma mark - Utility methods

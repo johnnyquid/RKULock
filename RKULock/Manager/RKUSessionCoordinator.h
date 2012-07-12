@@ -15,7 +15,7 @@
 
 + (id)sharedInstance;
 
-- (void)configureService:(NSString *)serviceName 
+- (BOOL)configureService:(NSString *)serviceName 
       usingConfiguration:(NSDictionary *)configuration 
             withDelegate:(id<RKUSessionCoordinatorDelegate>)delegate;
 

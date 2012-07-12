@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A706012415AF79AE00B03299 /* LocalizedStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = A706012615AF79AE00B03299 /* LocalizedStrings.strings */; };
 		A7722B6615ADFF220078826A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7722B6515ADFF220078826A /* UIKit.framework */; };
 		A7722B6815ADFF220078826A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7722B6715ADFF220078826A /* Foundation.framework */; };
 		A7722B6A15ADFF220078826A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7722B6915ADFF220078826A /* CoreGraphics.framework */; };
@@ -17,11 +18,11 @@
 		A7722B7C15ADFF220078826A /* RKUViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7722B7A15ADFF220078826A /* RKUViewController.xib */; };
 		A79285F315AE0F74005F6435 /* libRKULock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A79285F215AE0F74005F6435 /* libRKULock.a */; };
 		A79285F515AE17E6005F6435 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A79285F415AE17E6005F6435 /* Security.framework */; };
-		A79285F715AE1A23005F6435 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A79285F615AE1A23005F6435 /* libPods.a */; };
 		A79285FA15AE1CD8005F6435 /* AppConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = A79285F915AE1CD8005F6435 /* AppConfiguration.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A706012515AF79AE00B03299 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizedStrings.strings; sourceTree = "<group>"; };
 		A7722B6115ADFF220078826A /* RKULockSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RKULockSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7722B6515ADFF220078826A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A7722B6715ADFF220078826A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,7 +38,6 @@
 		A7722B7B15ADFF220078826A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RKUViewController.xib; sourceTree = "<group>"; };
 		A79285F215AE0F74005F6435 /* libRKULock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libRKULock.a; path = "../build/Release-iphoneos/libRKULock.a"; sourceTree = "<group>"; };
 		A79285F415AE17E6005F6435 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		A79285F615AE1A23005F6435 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "../Pods/build/Release-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		A79285F915AE1CD8005F6435 /* AppConfiguration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppConfiguration.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -46,7 +46,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A79285F715AE1A23005F6435 /* libPods.a in Frameworks */,
 				A79285F515AE17E6005F6435 /* Security.framework in Frameworks */,
 				A79285F315AE0F74005F6435 /* libRKULock.a in Frameworks */,
 				A7722B6615ADFF220078826A /* UIKit.framework in Frameworks */,
@@ -61,7 +60,6 @@
 		A7722B5615ADFF220078826A = {
 			isa = PBXGroup;
 			children = (
-				A79285F615AE1A23005F6435 /* libPods.a */,
 				A7722B6B15ADFF220078826A /* RKULockSample */,
 				A7722B6415ADFF220078826A /* Frameworks */,
 				A7722B6215ADFF220078826A /* Products */,
@@ -109,6 +107,7 @@
 				A7722B6E15ADFF220078826A /* InfoPlist.strings */,
 				A7722B7115ADFF220078826A /* main.m */,
 				A7722B7315ADFF220078826A /* RKULockSample-Prefix.pch */,
+				A706012615AF79AE00B03299 /* LocalizedStrings.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -175,6 +174,7 @@
 				A7722B7015ADFF220078826A /* InfoPlist.strings in Resources */,
 				A7722B7C15ADFF220078826A /* RKUViewController.xib in Resources */,
 				A79285FA15AE1CD8005F6435 /* AppConfiguration.plist in Resources */,
+				A706012415AF79AE00B03299 /* LocalizedStrings.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +194,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		A706012615AF79AE00B03299 /* LocalizedStrings.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A706012515AF79AE00B03299 /* en */,
+			);
+			name = LocalizedStrings.strings;
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		A7722B6E15ADFF220078826A /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -269,6 +278,10 @@
 					"$(SRCROOT)/../RKULock/RKULock/Categories/",
 				);
 				INFOPLIST_FILE = "RKULockSample/RKULockSample-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -285,6 +298,10 @@
 					"$(SRCROOT)/../RKULock/RKULock/Categories/",
 				);
 				INFOPLIST_FILE = "RKULockSample/RKULockSample-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

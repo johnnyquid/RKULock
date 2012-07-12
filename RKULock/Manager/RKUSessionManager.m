@@ -46,9 +46,9 @@
 }
 
 
-- (void)configureService:(NSString *)serviceName using:(NSDictionary *)configuration
+- (BOOL)configureService:(NSString *)serviceName using:(NSDictionary *)configuration
 {
-  [self.sessionCoordinator configureService:serviceName usingConfiguration:configuration withDelegate:self];
+  return [self.sessionCoordinator configureService:serviceName usingConfiguration:configuration withDelegate:self];
 }
 
 - (BOOL)handleOpenURLForAuthentication:(NSURL *)url

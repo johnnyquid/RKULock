@@ -12,7 +12,7 @@
 
 + (NSError *)configurationError;
 + (NSError *)configurationErrorWithMessage:(NSString *)message;
-+ (NSError *)notFoundError;
++ (NSError *)serviceNotFoundError:(NSString *)serviceName;
 + (NSError *)plugInNotConfiguredError;
 + (NSError *)sessionManagerGenericError;
 

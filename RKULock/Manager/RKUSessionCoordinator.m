@@ -32,7 +32,8 @@
 - (NSArray *)arrayFilteredByProtocolConformed:(NSArray *)unfilteredClasses;
 - (Class)pluginClassWithServiceName:(NSString *)serviceName;
 - (NSArray *)findAuthPluginClassesByConventionAndProtocol;
-- (NSDictionary *)dictionaryWithInvocation:(NSInvocation *)invocation andDelegate:(id)delegate;
+- (NSDictionary *)dictionaryWithInvocation:(NSInvocation *)invocation andDelegate:(id)delegate 
+                                 andPlugin:(id<RKUAuthPlugIn>)plugin;
 - (void)processRequestsQueue;
 
 - (void)respondConfigurationWithError:(NSError *)error toDelegate:(id<RKUSessionCoordinatorDelegate>)delegate;
@@ -154,26 +155,30 @@ __strong static id _sharedObject = nil;
 }
 
 
-- (void)configureService:(NSString *)serviceName 
+- (BOOL)configureService:(NSString *)serviceName 
       usingConfiguration:(NSDictionary *)configuration 
             withDelegate:(id<RKUSessionCoordinatorDelegate>)delegate
 {
+  BOOL configurationValid = YES;
   Class pluginClass = [self pluginClassWithServiceName:serviceName];	
   if (!pluginClass) {
-    [self respondPluginNotFoundWithError:nil toDelegate:delegate];
+    configurationValid = NO;
+    [self respondPluginNotFoundWithError:[NSError serviceNotFoundError:serviceName] toDelegate:delegate];
   }
-  else if (![self.configuredPlugins objectForKey:serviceName] && [serviceName length]) {    
+  else {    
     id<RKUAuthPlugIn> plugin = [[pluginClass alloc] init];
     [plugin setAuthStore:[[RKUKeychainStore alloc] init]];    
     [plugin setDelegate:self];
     [self.configuredPlugins setObject:plugin forKey:serviceName];                        
+    if (![plugin configureUsing:configuration]) {
+      configurationValid = NO;
+      [self respondConfigurationWithError:[plugin configurationError] 
+                               toDelegate:delegate];
+    }
   }
-  id<RKUAuthPlugIn> plugin = [self.configuredPlugins objectForKey:serviceName];  
-  if (![plugin configureUsing:configuration]) {
-    [self respondConfigurationWithError:[plugin configurationError] 
-                             toDelegate:delegate];
-  }
+
   
+  return configurationValid;
 }
 
 - (BOOL)isAuthenticatedInService:(NSString *)serviceName 
@@ -183,7 +188,7 @@ __strong static id _sharedObject = nil;
     self.currentAuthPlugin = [self.configuredPlugins objectForKey:serviceName];
     return [self.currentAuthPlugin isAuthenticated];
   } else {
-    [self respondPluginNotConfiguredWithError:nil toDelegate:delegate];
+    [self respondPluginNotConfiguredWithError:[NSError plugInNotConfiguredError] toDelegate:delegate];
     return NO;
   }
 
@@ -207,7 +212,7 @@ __strong static id _sharedObject = nil;
                                                        andPlugin:authPlugin]];
     [self processRequestsQueue];
   } else {
-    [self respondPluginNotConfiguredWithError:nil toDelegate:delegate];
+    [self respondPluginNotConfiguredWithError:[NSError plugInNotConfiguredError] toDelegate:delegate];
     
   }
 }
@@ -239,7 +244,7 @@ __strong static id _sharedObject = nil;
     [self processRequestsQueue];
 
   } else {
-    [self respondPluginNotConfiguredWithError:nil toDelegate:delegate];
+    [self respondPluginNotConfiguredWithError:[NSError plugInNotConfiguredError] toDelegate:delegate];
     
   }
 }
@@ -339,21 +344,21 @@ __strong static id _sharedObject = nil;
 {
   if ([delegate respondsToSelector:@selector(sessionCoordinator:configurationDidFailWithError:)]) {
     
-    [delegate sessionCoordinator:self configurationDidFailWithError:[NSError configurationErrorWithMessage:@"AppId is required"]];
+    [delegate sessionCoordinator:self configurationDidFailWithError:error];
   }
 }
 
 - (void)respondPluginNotFoundWithError:(NSError *)error toDelegate:(id<RKUSessionCoordinatorDelegate>)delegate
 {
   if ([delegate respondsToSelector:@selector(sessionCoordinator:pluginNotFoundWithError:)]) {
-    [delegate sessionCoordinator:self pluginNotFoundWithError:[NSError notFoundError]];
+    [delegate sessionCoordinator:self pluginNotFoundWithError:error];
   }  
 }
 
 - (void)respondPluginNotConfiguredWithError:(NSError *)error toDelegate:(id<RKUSessionCoordinatorDelegate>)delegate
 {
   if ([delegate respondsToSelector:@selector(sessionCoordinator:pluginNotConfiguredWithError:)]) {
-    [delegate sessionCoordinator:self pluginNotConfiguredWithError:[NSError plugInNotConfiguredError]];
+    [delegate sessionCoordinator:self pluginNotConfiguredWithError:error];
   }  
 }
 

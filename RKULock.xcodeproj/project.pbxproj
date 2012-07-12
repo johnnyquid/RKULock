@@ -132,7 +132,6 @@
 		D1C1CF4615ADFD6100BAB117 /* NSError+RKULock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+RKULock.h"; path = "Categories/NSError+RKULock.h"; sourceTree = "<group>"; };
 		D1C1CF4715ADFD6100BAB117 /* NSError+RKULock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+RKULock.m"; path = "Categories/NSError+RKULock.m"; sourceTree = "<group>"; };
 		D1C1CF4B15AE287300BAB117 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizedStrings.strings; sourceTree = "<group>"; };
-		D1C1CF4D15AE287F00BAB117 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LocalizedStrings.strings; sourceTree = "<group>"; };
 		E2494238A20E4DEEBED62585 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -571,7 +570,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				D1C1CF4B15AE287300BAB117 /* en */,
-				D1C1CF4D15AE287F00BAB117 /* es */,
 			);
 			name = LocalizedStrings.strings;
 			path = Configuration;

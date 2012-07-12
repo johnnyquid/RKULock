@@ -10,7 +10,7 @@
 
 #import "RKUViewController.h"
 #import "NSError+RKULock.h"
-#import "RKUFacebookConnectAuthPlugIn.h"
+
 #import "RKUSessionManager.h"
 
 @interface RKUAppDelegate ()
@@ -26,7 +26,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  [[RKUFacebookConnectAuthPlugIn alloc] init];
+
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   self.sessionManager = [[RKUSessionManager alloc] init];
     // Override point for customization after application launch.
